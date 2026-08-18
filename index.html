@@ -2,72 +2,159 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>De mí para nadie — Drucillo</title>
-<meta name="description" content="De mí para nadie: Un inventario de cercanía y lejanía. Un poemario de Drucillo.">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#efe7d5">
+<meta name="description" content="De mí para nadie — Un inventario de cercanía y lejanía, de Rubén “Drucillo”.">
+<title>De mí para nadie · Rubén “Drucillo”</title>
 <style>
-:root{--paper:#eee9df;--ink:#262321;--muted:#777068;--line:#cfc7bb;--soft:#e4ddd2}
-*{box-sizing:border-box;scroll-behavior:smooth}
-body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+:root{--paper:#f3ecdc;--paper2:#eee4d0;--ink:#29251f;--muted:#746c5f;--line:#cfc4ae;--accent:#675844;--max:900px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;background:var(--paper)}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,'Times New Roman',serif;line-height:1.72;-webkit-font-smoothing:antialiased}
 a{color:inherit}
-.hero{min-height:88vh;padding:9vw 7vw;display:flex;align-items:flex-end;border-bottom:1px solid var(--line)}
-.hero-inner{max-width:1000px}
-.kicker,.eyebrow{font:600 11px/1.2 Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
-h1{font-size:clamp(58px,11vw,140px);line-height:.82;font-weight:400;letter-spacing:-.05em;margin:28px 0 32px}
-.subtitle{font-size:clamp(21px,3vw,32px);color:var(--muted);max-width:720px;margin:0}
-.author{margin-top:65px;font-size:20px;font-style:italic}
-.enter{display:inline-block;margin-top:38px;padding:14px 20px;border:1px solid var(--ink);text-decoration:none;font:600 11px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}
-.section{max-width:1120px;margin:auto;padding:110px 7vw}
-h2{font-size:clamp(40px,6vw,70px);font-weight:400;line-height:.95;margin:12px 0 35px}
-.lead{font-size:20px;line-height:1.65;max-width:700px;color:#514b46}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line);margin-top:55px}
-.card{background:transparent;min-height:190px;padding:25px;text-align:left;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.2s}
-.card:hover{background:var(--soft);transform:translateY(-2px)}
-.num,.read{font:600 10px Arial,sans-serif;letter-spacing:.15em;color:var(--muted);text-transform:uppercase}
-.title{font-size:27px;line-height:1.05;max-width:220px}
-.poem{max-width:850px;margin:auto;padding:120px 7vw 80px;border-top:1px solid var(--line);scroll-margin-top:20px}
-.poem h2{font-size:clamp(48px,8vw,82px);margin:18px 0 70px;letter-spacing:-.03em}
-.verses{font-size:clamp(19px,2.2vw,23px);line-height:1.9;white-space:pre-line}
-.controls{display:flex;justify-content:space-between;gap:15px;margin-top:90px;padding-top:25px;border-top:1px solid var(--line)}
-.controls a{font:600 10px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
-footer{padding:70px 7vw;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+.topbar{position:sticky;top:0;z-index:20;background:rgba(243,236,220,.92);backdrop-filter:blur(10px);border-bottom:1px solid rgba(103,88,68,.16);height:52px;display:flex;align-items:center;justify-content:space-between;padding:0 max(18px,calc((100vw - var(--max))/2));font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+.topbar a{text-decoration:none;color:var(--muted)}
+.cover{min-height:92vh;display:flex;align-items:center;justify-content:center;padding:70px 24px 90px;text-align:center;position:relative}
+.cover-inner{max-width:800px}
+.eyebrow{font-size:.75rem;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);margin-bottom:30px}
+.cover h1{font-size:clamp(3rem,9vw,6.8rem);font-weight:400;line-height:.98;margin:0;letter-spacing:-.045em}
+.cover-sub{font-size:clamp(1.15rem,2.5vw,1.55rem);font-style:italic;color:#5e564b;margin:28px auto 34px;max-width:620px}
+.ornament{display:flex;align-items:center;gap:14px;justify-content:center;color:var(--accent);margin:28px 0}
+.ornament:before,.ornament:after{content:"";width:72px;height:1px;background:var(--line)}
+.author{font-size:1rem;letter-spacing:.08em}
+.cover-note{margin-top:60px;font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+.container{width:min(var(--max),calc(100% - 34px));margin:auto}
+.section-head{padding:80px 0 30px;text-align:center}
+.section-head .eyebrow{margin-bottom:15px}
+.section-head h2{font-size:clamp(2rem,5vw,3.1rem);font-weight:400;margin:0}
+.index-wrap{background:rgba(255,255,255,.18);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:22px 0 30px}
+.index{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 30px}
+.index li{border-bottom:1px solid rgba(103,88,68,.18)}
+.index a{display:flex;align-items:baseline;gap:15px;text-decoration:none;padding:14px 5px;transition:transform .18s ease,color .18s ease}
+.index a:hover{transform:translateX(5px);color:var(--accent)}
+.index span{font-size:.7rem;color:var(--muted);width:25px}
+.index strong{font-weight:400;font-size:1.05rem}
+.reading{padding:10px 0 80px}
+.poem{scroll-margin-top:72px;padding:110px 0 100px;border-bottom:1px solid var(--line)}
+.poem-kicker{font-size:.7rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:18px}
+.poem h2{font-weight:400;font-size:clamp(2.1rem,5vw,3.5rem);line-height:1.08;margin:0;max-width:780px}
+.poem-rule{width:54px;height:1px;background:var(--accent);margin:28px 0 38px}
+.poem-text{font-size:clamp(1.08rem,2.1vw,1.23rem);line-height:1.9;white-space:pre-wrap;max-width:720px}
+.poem-nav{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:10px;margin-top:55px;padding-top:18px;border-top:1px solid rgba(103,88,68,.2)}
+.nav-btn,.index-btn{font-family:inherit;font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:10px 6px;color:var(--muted)}
+.nav-btn:last-child{text-align:right}
+.index-btn{color:var(--ink);text-align:center;border-bottom:1px solid var(--accent)}
+.disabled{opacity:.35}
+footer{padding:50px 0 70px;text-align:center;color:var(--muted);font-size:.78rem;letter-spacing:.08em}
 @media(max-width:650px){
-.hero{min-height:82vh;padding:55px 22px}
-.section{padding:80px 22px}
-.poem{padding:85px 22px 65px}
-.poem h2{margin-bottom:55px}
-.verses{font-size:18px;line-height:1.9}
-.controls{margin-top:65px}
+ .topbar{padding:0 16px}
+ .cover{min-height:86vh;padding:50px 18px 70px}
+ .cover h1{font-size:clamp(3.1rem,16vw,5rem)}
+ .index{grid-template-columns:1fr;gap:0}
+ .poem{padding:78px 0 74px}
+ .poem-text{font-size:1.08rem;line-height:1.82}
+ .poem-nav{grid-template-columns:1fr 1fr;gap:4px}
+ .index-btn{grid-column:1/-1;grid-row:1;text-align:center;margin-bottom:7px}
+ .nav-btn:last-child{text-align:right}
 }
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.index a{transition:none}}
+
+.intro{max-width:720px;margin:0 auto;padding:95px 0 100px;border-bottom:1px solid var(--line)}
+.intro-inner{padding:0 8px}
+.intro-label{font-size:.7rem;letter-spacing:.22em;text-transform:uppercase;color:var(--muted);margin-bottom:20px;text-align:center}
+.intro h2,.thanks h2{font-weight:400;font-size:clamp(2rem,5vw,3.2rem);line-height:1.08;text-align:center;margin:0 0 30px}
+.intro p,.thanks p{font-size:1.08rem;line-height:1.95;margin:0 0 1.25em;text-align:left}
+.intro .dropcap:first-letter{font-size:3.6em;float:left;line-height:.78;padding:.08em .12em 0 0;color:var(--accent)}
+.thanks{padding:115px 0 120px;text-align:center;border-top:1px solid var(--line)}
+.thanks-inner{max-width:680px;margin:auto;padding:0 8px}
+.thanks p{text-align:center}
+.thanks .signature{margin-top:38px;font-size:.95rem;letter-spacing:.08em}
+.thanks .ornament{margin:34px 0}
 </style>
 </head>
-<body>
-<header class="hero">
-  <div class="hero-inner">
-    <div class="kicker">Un poemario de Drucillo</div>
-    <h1>De mí<br>para nadie</h1>
-    <p class="subtitle">Un inventario de cercanía y lejanía</p>
+<body id="top">
+<nav class="topbar"><a href="#top">De mí para nadie</a><a href="#indice">Índice · 51 poemas</a></nav>
+<header class="cover">
+  <div class="cover-inner">
+    <div class="eyebrow">Poemario</div>
+    <h1>De mí para nadie</h1>
+    <div class="cover-sub">Un inventario de cercanía y lejanía</div>
+    <div class="ornament">✦</div>
     <div class="author">Rubén “Drucillo”</div>
-    <a class="enter" href="#indice">Entrar al poemario</a>
+    <div class="cover-note">Edición web · lectura completa</div>
   </div>
 </header>
-
-<main>
-<section class="section" id="indice">
-  <div class="eyebrow">El libro</div>
-  <h2>Índice</h2>
-  <p class="lead">Cuarenta y cinco textos reunidos en un inventario de cercanías, despedidas, memoria, deseo y silencio.</p>
-  <div class="grid">
-    <a class="card" href="#poem-1"><span class="num">01</span><span class="title">Ventanas al alma</span><span class="read">Leer →</span></a><a class="card" href="#poem-2"><span class="num">02</span><span class="title">Velada tomada</span><span class="read">Leer →</span></a><a class="card" href="#poem-3"><span class="num">03</span><span class="title">Trillas</span><span class="read">Leer →</span></a><a class="card" href="#poem-4"><span class="num">04</span><span class="title">Nuestro limbo</span><span class="read">Leer →</span></a><a class="card" href="#poem-5"><span class="num">05</span><span class="title">Kiara</span><span class="read">Leer →</span></a><a class="card" href="#poem-6"><span class="num">06</span><span class="title">Lío</span><span class="read">Leer →</span></a><a class="card" href="#poem-7"><span class="num">07</span><span class="title">Árnica</span><span class="read">Leer →</span></a><a class="card" href="#poem-8"><span class="num">08</span><span class="title">Desaires carmín</span><span class="read">Leer →</span></a><a class="card" href="#poem-9"><span class="num">09</span><span class="title">Pavesa</span><span class="read">Leer →</span></a><a class="card" href="#poem-10"><span class="num">10</span><span class="title">Namor</span><span class="read">Leer →</span></a><a class="card" href="#poem-11"><span class="num">11</span><span class="title">Olivos de amor</span><span class="read">Leer →</span></a><a class="card" href="#poem-12"><span class="num">12</span><span class="title">Días especiales</span><span class="read">Leer →</span></a><a class="card" href="#poem-13"><span class="num">13</span><span class="title">De grumete a almirante</span><span class="read">Leer →</span></a><a class="card" href="#poem-14"><span class="num">14</span><span class="title">Bravo</span><span class="read">Leer →</span></a><a class="card" href="#poem-15"><span class="num">15</span><span class="title">Enseñando sin aprender</span><span class="read">Leer →</span></a><a class="card" href="#poem-16"><span class="num">16</span><span class="title">Oliste</span><span class="read">Leer →</span></a><a class="card" href="#poem-17"><span class="num">17</span><span class="title">Amarte un milenio</span><span class="read">Leer →</span></a><a class="card" href="#poem-18"><span class="num">18</span><span class="title">Debo y no quiero</span><span class="read">Leer →</span></a><a class="card" href="#poem-19"><span class="num">19</span><span class="title">Eterno desolado</span><span class="read">Leer →</span></a><a class="card" href="#poem-20"><span class="num">20</span><span class="title">Excusa</span><span class="read">Leer →</span></a><a class="card" href="#poem-21"><span class="num">21</span><span class="title">Espuma y nada más</span><span class="read">Leer →</span></a><a class="card" href="#poem-22"><span class="num">22</span><span class="title">Tanto en tan poco</span><span class="read">Leer →</span></a><a class="card" href="#poem-23"><span class="num">23</span><span class="title">Pliegues del tiempo</span><span class="read">Leer →</span></a><a class="card" href="#poem-24"><span class="num">24</span><span class="title">Deseo Fugaz</span><span class="read">Leer →</span></a><a class="card" href="#poem-25"><span class="num">25</span><span class="title">En todo momento me inspiras</span><span class="read">Leer →</span></a><a class="card" href="#poem-26"><span class="num">26</span><span class="title">Todo te busca a ti</span><span class="read">Leer →</span></a><a class="card" href="#poem-27"><span class="num">27</span><span class="title">Solo, te digo</span><span class="read">Leer →</span></a><a class="card" href="#poem-28"><span class="num">28</span><span class="title">Cenizas de noche</span><span class="read">Leer →</span></a><a class="card" href="#poem-29"><span class="num">29</span><span class="title">Impío</span><span class="read">Leer →</span></a><a class="card" href="#poem-30"><span class="num">30</span><span class="title">Gramática para dos</span><span class="read">Leer →</span></a><a class="card" href="#poem-31"><span class="num">31</span><span class="title">Soneto</span><span class="read">Leer →</span></a><a class="card" href="#poem-32"><span class="num">32</span><span class="title">Dinosaurio fatigado</span><span class="read">Leer →</span></a><a class="card" href="#poem-33"><span class="num">33</span><span class="title">Titilar</span><span class="read">Leer →</span></a><a class="card" href="#poem-34"><span class="num">34</span><span class="title">Lucha en la marea</span><span class="read">Leer →</span></a><a class="card" href="#poem-35"><span class="num">35</span><span class="title">La paz de los naufragios</span><span class="read">Leer →</span></a><a class="card" href="#poem-36"><span class="num">36</span><span class="title">Geometría de la lluvia</span><span class="read">Leer →</span></a><a class="card" href="#poem-37"><span class="num">37</span><span class="title">La casa deshabitada</span><span class="read">Leer →</span></a><a class="card" href="#poem-38"><span class="num">38</span><span class="title">La costura del tiempo</span><span class="read">Leer →</span></a><a class="card" href="#poem-39"><span class="num">39</span><span class="title">El hallazgo</span><span class="read">Leer →</span></a><a class="card" href="#poem-40"><span class="num">40</span><span class="title">La pecera de diamante</span><span class="read">Leer →</span></a><a class="card" href="#poem-41"><span class="num">41</span><span class="title">El idioma de los incendios</span><span class="read">Leer →</span></a><a class="card" href="#poem-42"><span class="num">42</span><span class="title">El truco de los relojes rotos</span><span class="read">Leer →</span></a><a class="card" href="#poem-43"><span class="num">43</span><span class="title">La paz de las almas rotas</span><span class="read">Leer →</span></a><a class="card" href="#poem-44"><span class="num">44</span><span class="title">La física del abismo</span><span class="read">Leer →</span></a><a class="card" href="#poem-45"><span class="num">45</span><span class="title">El libreto del silencio</span><span class="read">Leer →</span></a>
+<section class="intro container" aria-labelledby="intro-title">
+  <div class="intro-inner">
+    <div class="intro-label">Antes de comenzar</div>
+    <h2 id="intro-title">Un lugar para lo que permanece</h2>
+    <p class="dropcap">Este libro nació de mirar de cerca aquello que a veces preferimos mantener a cierta distancia.</p>
+    <p>De las personas que se quedan, de las que se van, de lo que permanece cuando alguien ya no está y de todo aquello que, aun sin tener nombre, encuentra una forma de quedarse.</p>
+    <p><em>De mí para nadie</em> es un inventario de esas cercanías y lejanías: un lugar donde los recuerdos, el deseo, la pérdida y el afecto pueden existir sin tener que explicarse demasiado.</p>
+    <p>Estas páginas no pretenden tener todas las respuestas. Solo quieren dejar constancia de lo que alguna vez fue sentido.</p>
   </div>
 </section>
-
-<section>
-  
-<article class="poem" id="poem-1">
-  <div class="eyebrow">Poema 01 de 45</div>
+<main>
+<section id="indice" class="container">
+  <div class="section-head"><div class="eyebrow">Contenido</div><h2>Índice</h2></div>
+  <div class="index-wrap"><ol class="index"><li><a href="#poema-1"><span>01</span><strong>Ventanas al alma</strong></a></li>
+<li><a href="#poema-2"><span>02</span><strong>Velada tomada</strong></a></li>
+<li><a href="#poema-3"><span>03</span><strong>Trillas</strong></a></li>
+<li><a href="#poema-4"><span>04</span><strong>Nuestro limbo</strong></a></li>
+<li><a href="#poema-5"><span>05</span><strong>Kiara</strong></a></li>
+<li><a href="#poema-6"><span>06</span><strong>Lío</strong></a></li>
+<li><a href="#poema-7"><span>07</span><strong>Árnica</strong></a></li>
+<li><a href="#poema-8"><span>08</span><strong>Desaires carmín</strong></a></li>
+<li><a href="#poema-9"><span>09</span><strong>Pavesa</strong></a></li>
+<li><a href="#poema-10"><span>10</span><strong>Namor</strong></a></li>
+<li><a href="#poema-11"><span>11</span><strong>Olivos de amor</strong></a></li>
+<li><a href="#poema-12"><span>12</span><strong>Días especiales</strong></a></li>
+<li><a href="#poema-13"><span>13</span><strong>De grumete a almirante</strong></a></li>
+<li><a href="#poema-14"><span>14</span><strong>Bravo</strong></a></li>
+<li><a href="#poema-15"><span>15</span><strong>Enseñando sin aprender</strong></a></li>
+<li><a href="#poema-16"><span>16</span><strong>Oliste</strong></a></li>
+<li><a href="#poema-17"><span>17</span><strong>Amarte un milenio</strong></a></li>
+<li><a href="#poema-18"><span>18</span><strong>Debo y no quiero</strong></a></li>
+<li><a href="#poema-19"><span>19</span><strong>Eterno desolado</strong></a></li>
+<li><a href="#poema-20"><span>20</span><strong>Excusa</strong></a></li>
+<li><a href="#poema-21"><span>21</span><strong>Espuma y nada más</strong></a></li>
+<li><a href="#poema-22"><span>22</span><strong>Tanto en tan poco</strong></a></li>
+<li><a href="#poema-23"><span>23</span><strong>Pliegues del tiempo</strong></a></li>
+<li><a href="#poema-24"><span>24</span><strong>Deseo Fugaz</strong></a></li>
+<li><a href="#poema-25"><span>25</span><strong>En todo momento me inspiras</strong></a></li>
+<li><a href="#poema-26"><span>26</span><strong>Todo te busca a ti</strong></a></li>
+<li><a href="#poema-27"><span>27</span><strong>Solo, te digo</strong></a></li>
+<li><a href="#poema-28"><span>28</span><strong>Cenizas de noche</strong></a></li>
+<li><a href="#poema-29"><span>29</span><strong>Impío</strong></a></li>
+<li><a href="#poema-30"><span>30</span><strong>Gramática para dos</strong></a></li>
+<li><a href="#poema-31"><span>31</span><strong>Soneto</strong></a></li>
+<li><a href="#poema-32"><span>32</span><strong>Dinosaurio fatigado</strong></a></li>
+<li><a href="#poema-33"><span>33</span><strong>Titilar</strong></a></li>
+<li><a href="#poema-34"><span>34</span><strong>Lucha en la marea</strong></a></li>
+<li><a href="#poema-35"><span>35</span><strong>La paz de los naufragios</strong></a></li>
+<li><a href="#poema-36"><span>36</span><strong>Geometría de la lluvia</strong></a></li>
+<li><a href="#poema-37"><span>37</span><strong>La casa deshabitada</strong></a></li>
+<li><a href="#poema-38"><span>38</span><strong>La costura del tiempo</strong></a></li>
+<li><a href="#poema-39"><span>39</span><strong>El hallazgo</strong></a></li>
+<li><a href="#poema-40"><span>40</span><strong>La pecera de diamante</strong></a></li>
+<li><a href="#poema-41"><span>41</span><strong>El idioma de los incendios</strong></a></li>
+<li><a href="#poema-42"><span>42</span><strong>El truco de los relojes rotos</strong></a></li>
+<li><a href="#poema-43"><span>43</span><strong>La paz de las almas rotas</strong></a></li>
+<li><a href="#poema-44"><span>44</span><strong>La física del abismo</strong></a></li>
+<li><a href="#poema-45"><span>45</span><strong>El libreto del silencio</strong></a></li>
+<li><a href="#poema-46"><span>46</span><strong>Páramo</strong></a></li>
+<li><a href="#poema-47"><span>47</span><strong>Tornasol</strong></a></li>
+<li><a href="#poema-48"><span>48</span><strong>Cabras</strong></a></li>
+<li><a href="#poema-49"><span>49</span><strong>Llamado del cansancio</strong></a></li>
+<li><a href="#poema-50"><span>50</span><strong>El arte en tu ser</strong></a></li>
+<li><a href="#poema-51"><span>51</span><strong>Cánticos</strong></a></li></ol></div>
+</section>
+<section class="reading container" aria-label="Lectura completa">
+<article class="poem" id="poema-1" data-pages="2-2">
+  <div class="poem-kicker">Poema 01 · 02—02</div>
   <h2>Ventanas al alma</h2>
-  <div class="verses">No son solo pupilas y un iris pintado,
+  <div class="poem-rule"></div>
+  <div class="poem-text">No son solo pupilas y un iris pintado,
 sino espejos profundos, donde mi mundo se ha quedado
 Ventanas del alma que guardan el secreto
 de historias calladas y un amor predilecto.
@@ -83,17 +170,16 @@ Y aunque el tiempo avance y el cristal se fatigue,
 guardarán el brillo que mi alma siempre persigue.
 Son faros de vida, de verdad sin disfraz,
 los ojos que quiero a mirar.</div>
-  <div class="controls">
-    <a href="#indice">← Índice</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-2">Siguiente →</a>
+  <div class="poem-nav">
+    <span class="nav-btn disabled">← Anterior</span>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-2">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-2">
-  <div class="eyebrow">Poema 02 de 45</div>
+</article><article class="poem" id="poema-2" data-pages="3-3">
+  <div class="poem-kicker">Poema 02 · 03—03</div>
   <h2>Velada tomada</h2>
-  <div class="verses">En la frialdad de la noche
+  <div class="poem-rule"></div>
+  <div class="poem-text">En la frialdad  de la noche
 sentí tus ojos quemando mi cuerpo,
 No pude procesar
 y pensé estar soñando despierto,
@@ -109,23 +195,21 @@ La velada hicimos eterna,
 dimos en horas varias vueltas a la tierra.
 Hablamos del cielo nocturno,
 y lo lejano que se ve Saturno
-
 Al finalizar la noche,
 contigo parada en el pasto,
 no pude hacer algo más que acompañarte al ocaso,
 más tu mirada eterna me dejó la certeza,
 de que en ti hallé mi mayor riqueza.</div>
-  <div class="controls">
-    <a href="#poem-1">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-3">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-1">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-3">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-3">
-  <div class="eyebrow">Poema 03 de 45</div>
+</article><article class="poem" id="poema-3" data-pages="4-4">
+  <div class="poem-kicker">Poema 03 · 04—04</div>
   <h2>Trillas</h2>
-  <div class="verses">Imagino tu rostro de trigo,
+  <div class="poem-rule"></div>
+  <div class="poem-text">Imagino tu rostro de trigo,
 no puedo, no quiero
 soñar más contigo
 en este día gris
@@ -141,17 +225,16 @@ El sentir de tu piel es escaso
 en este mar de piedras al tacto,
 no te alejes de mí en este día,
 que sin ti el sol mío no brilla.</div>
-  <div class="controls">
-    <a href="#poem-2">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-4">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-2">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-4">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-4">
-  <div class="eyebrow">Poema 04 de 45</div>
+</article><article class="poem" id="poema-4" data-pages="5-6">
+  <div class="poem-kicker">Poema 04 · 05—06</div>
   <h2>Nuestro limbo</h2>
-  <div class="verses">Podría aprender a decir &quot;te amo&quot;
+  <div class="poem-rule"></div>
+  <div class="poem-text">Podría aprender a decir "te amo"
 en todos los idiomas que existen,
 pero que sentido tendría,
 si con solo un beso,
@@ -168,7 +251,6 @@ tanto cuando estoy contigo,
 que temo que algún día
 ya no distinga lo divino
 del peligro.
-
 Pues mi son se embarnece
 con las melodías de la muerte
 que ansia que partamos juntos
@@ -179,17 +261,16 @@ tal vez creemos un limbo de amor,
 pues tú conviertes mi infierno
 en el cielo y las llamas del amor
 en el viento más fresco.</div>
-  <div class="controls">
-    <a href="#poem-3">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-5">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-3">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-5">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-5">
-  <div class="eyebrow">Poema 05 de 45</div>
+</article><article class="poem" id="poema-5" data-pages="7-9">
+  <div class="poem-kicker">Poema 05 · 07—09</div>
   <h2>Kiara</h2>
-  <div class="verses">Me desgarra no haberte sabido amar
+  <div class="poem-rule"></div>
+  <div class="poem-text">Me desgarra no haberte sabido amar
 desde el principio,
 mi copo de nieve.
 Me marchita que sabía
@@ -206,7 +287,6 @@ y el anochecer de los días.
 No pediste rendirte
 ante lo cruel del sentir.
 Nunca pediste nada
-
 y aún así sabes dar todo
 lo que yo sí pedí.
 Te pido perdón,
@@ -234,9 +314,7 @@ sino porque a veces
 en este mundo que se te inundó
 de tanta oscuridad
 era tu forma de brillar.
-
 Eres y serás
-
 necia como la tormenta,
 impredecible como la marea,
 caótica como la tempestad,
@@ -246,7 +324,6 @@ pero sé pues,
 que por eso
 llegaste a mi vida
 con las nubes en tus ojos.
-
 Que sepas que yo
 siempre veré tu brillo,
 pase lo que pase,
@@ -260,17 +337,16 @@ yo estaré para gritar,
 para que todos entiendan
 que lo único que sé hacer
 es consolar.</div>
-  <div class="controls">
-    <a href="#poem-4">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-6">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-4">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-6">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-6">
-  <div class="eyebrow">Poema 06 de 45</div>
+</article><article class="poem" id="poema-6" data-pages="10-10">
+  <div class="poem-kicker">Poema 06 · 10—10</div>
   <h2>Lío</h2>
-  <div class="verses">Por la calle voy caminando,
+  <div class="poem-rule"></div>
+  <div class="poem-text">Por la calle voy caminando,
 sin calor ni descartes,
 pero siempre con la foto tuya
 para cuando el amor me arranque.
@@ -286,22 +362,20 @@ Faros y luces son testigos
 de cuando estuviste conmigo,
 ni el más sucio juego del destino,
 se compara con nuestro amorío.
-
 Silencio en las mañanas,
 Ruido en las madrugadas,
 es el eco de tu voz,
 taladrando mi morada.</div>
-  <div class="controls">
-    <a href="#poem-5">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-7">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-5">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-7">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-7">
-  <div class="eyebrow">Poema 07 de 45</div>
+</article><article class="poem" id="poema-7" data-pages="11-11">
+  <div class="poem-kicker">Poema 07 · 11—11</div>
   <h2>Árnica</h2>
-  <div class="verses">Podría escribir miles de versos
+  <div class="poem-rule"></div>
+  <div class="poem-text">Podría escribir miles de versos
 para intentar contarle a quién no te vió
 lo que provocaste en mi corazón.
 Y es que para describirte
@@ -309,7 +383,7 @@ no son suficientes
 ni todas las letras esas
 de los libros que lees,
 ni para mencionar tu personalidad
-el espíritu de la rebelión del pueblo
+el espíritu de la rebelión  del pueblo
 que tanto quieres.
 Tu aroma percibe mi intuición,
 que no existe en en la clasificación,
@@ -317,7 +391,6 @@ de los placeres vanos
 o reencarnación.
 Más sin embargo tu esplendor,
 podría catalogarse
-
 como de entre las estrellas
 el mismísimo sol.
 Divina arnica amada mía,
@@ -329,17 +402,16 @@ te miré,
 con la extenuante tez
 de los que se distinguen
 por mirar el acontecer.</div>
-  <div class="controls">
-    <a href="#poem-6">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-8">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-6">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-8">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-8">
-  <div class="eyebrow">Poema 08 de 45</div>
+</article><article class="poem" id="poema-8" data-pages="12-13">
+  <div class="poem-kicker">Poema 08 · 12—13</div>
   <h2>Desaires carmín</h2>
-  <div class="verses">De paso en salto,
+  <div class="poem-rule"></div>
+  <div class="poem-text">De paso en salto,
 de salto en paso,
 regando amor
 cuál semilla del rastro,
@@ -355,7 +427,6 @@ que en tus brazos se encontraban
 mis más profundos desmanes,
 por ello nunca te abandoné,
 me sentía preso de la jaula
-
 en la que de un día para otro
 me desperté.
 Sabía que si salía,
@@ -364,7 +435,6 @@ a quién se le originaría una herida,
 sería a tu piel de nácar,
 que tantas veces fue mi almohada,
 al pintar de la madrugada.
-
 Y esperé
 por si algún día
 al amanecer
@@ -375,17 +445,16 @@ yo en la oscuridad implorare
 que no lo hagas,,
 por el recuerdo
 de lo que sentimos ayer.</div>
-  <div class="controls">
-    <a href="#poem-7">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-9">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-7">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-9">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-9">
-  <div class="eyebrow">Poema 09 de 45</div>
+</article><article class="poem" id="poema-9" data-pages="14-14">
+  <div class="poem-kicker">Poema 09 · 14—14</div>
   <h2>Pavesa</h2>
-  <div class="verses">Era un amor cardíaco,
+  <div class="poem-rule"></div>
+  <div class="poem-text">Era un amor cardíaco,
 intenso como ninguno,
 el corazón esperaba paciente,
 porque sabía
@@ -400,7 +469,6 @@ nunca nos tocamos el pecho,
 y aún así pensábamos en abolengo.
 Cuando una oruga
 apenas reposaba en mi mente,
-
 la tuya ya era mariposa
 revoloteando alegremente.
 Si apenas en mi cama
@@ -411,17 +479,16 @@ de entre la mirra la más fina,
 a la espera tus besos
 al medio día,
 para descansar de mi prisa.</div>
-  <div class="controls">
-    <a href="#poem-8">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-10">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-8">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-10">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-10">
-  <div class="eyebrow">Poema 10 de 45</div>
+</article><article class="poem" id="poema-10" data-pages="15-15">
+  <div class="poem-kicker">Poema 10 · 15—15</div>
   <h2>Namor</h2>
-  <div class="verses">A veces pensamos
+  <div class="poem-rule"></div>
+  <div class="poem-text">A veces pensamos
 que la gravedad de los problemas
 se puede definir
 por el tamaño de las manos,
@@ -437,7 +504,6 @@ Lo corto de sus pies es igual de corto
 que el amor que les queda,
 lo tierno de sus manos
 se irá tan pronto,
-
 cómo lo limpio de su cara,
 caminar sin tropezar
 se hará complejo
@@ -448,19 +514,17 @@ por los humos de la ciudad
 Aquel niño puede guardar
 en el temblar de sus manos,
 la misma angustia
-del grave señor
-que trabaja el campo.</div>
-  <div class="controls">
-    <a href="#poem-9">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-11">Siguiente →</a>
+del grave señor que trabaja en el campo.</div>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-9">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-11">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-11">
-  <div class="eyebrow">Poema 11 de 45</div>
+</article><article class="poem" id="poema-11" data-pages="16-17">
+  <div class="poem-kicker">Poema 11 · 16—17</div>
   <h2>Olivos de amor</h2>
-  <div class="verses">¿Será acaso este nuestro momento?
+  <div class="poem-rule"></div>
+  <div class="poem-text">¿Será acaso este nuestro momento?
 Mi luna,
 morocha de piel de lirios,
 no te dejo de imaginar
@@ -475,7 +539,6 @@ este encuentro
 tal vez no sea casualidad,
 si tú en mí confías
 no habrá tal experiencia
-
 como la de este sueño
 que vamos a navegar
 Deja que el amor fluya
@@ -485,7 +548,6 @@ cuál semilla de agave,
 deja que el amor cierne
 apareciendo como calor
 en tu vientre.
-
 Por último sembremos
 de esta noche un recuerdo
 que quede marcado
@@ -494,17 +556,16 @@ que nos queme
 del deseo el aumento
 cada vez que la mente
 nos traiga a este recuerdo.</div>
-  <div class="controls">
-    <a href="#poem-10">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-12">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-10">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-12">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-12">
-  <div class="eyebrow">Poema 12 de 45</div>
+</article><article class="poem" id="poema-12" data-pages="18-18">
+  <div class="poem-kicker">Poema 12 · 18—18</div>
   <h2>Días especiales</h2>
-  <div class="verses">Me mido el pulso
+  <div class="poem-rule"></div>
+  <div class="poem-text">Me mido el pulso
 cada que puedo,
 para asegurame
 de no estar teniendo un sueño,
@@ -519,22 +580,20 @@ de algún amigo,
 también al entrecortar del tiempo
 cuando estás conmigo.
 No mido el bombear de mi sangre
-
 para asegurarme de que estoy vivo,
 más bien lo siento
 para recordarme
 de no vivir dormido.</div>
-  <div class="controls">
-    <a href="#poem-11">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-13">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-11">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-13">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-13">
-  <div class="eyebrow">Poema 13 de 45</div>
+</article><article class="poem" id="poema-13" data-pages="19-19">
+  <div class="poem-kicker">Poema 13 · 19—19</div>
   <h2>De grumete a almirante</h2>
-  <div class="verses">Buscando lo divino en lo mundano,
+  <div class="poem-rule"></div>
+  <div class="poem-text">Buscando lo divino en lo mundano,
 me topé, me topé;
 con las olas de tus rizos,
 con las arenas de tu piel.
@@ -550,22 +609,20 @@ alucinaba cuál marinero
 que había soñado con el naufragio.
 Cualquier grumete había soñado
 con tan bello escenario,
-
 naufragar en lo pétreo de tus hombros,
 tomar por timón lo tierno de tus labios,
 y así pues
 ser arrecife del mar de tu encanto.</div>
-  <div class="controls">
-    <a href="#poem-12">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-14">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-12">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-14">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-14">
-  <div class="eyebrow">Poema 14 de 45</div>
+</article><article class="poem" id="poema-14" data-pages="20-20">
+  <div class="poem-kicker">Poema 14 · 20—20</div>
   <h2>Bravo</h2>
-  <div class="verses">Yo te enseñé cómo amar,
+  <div class="poem-rule"></div>
+  <div class="poem-text">Yo te enseñé cómo amar,
 tú a mí; el cómo quiero ser amado.
 Bienaventurado el que se atreva
 a hablar de esta historia,
@@ -581,24 +638,22 @@ realidad de casi todos
 los enamorados.
 Bebimos tanto tiempo
 el elixir de la fruta de la piedad,
-
 que nunca más distinguimos
 cuando no hay que perdonar.
 Tú aprendiste a embarnecer en mis aguas,
 yo a no recaer con tus palabras.
 Yo aprendí a sujetarme a tus tierras,
 y tú a cortar mis raíces de ellas.</div>
-  <div class="controls">
-    <a href="#poem-13">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-15">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-13">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-15">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-15">
-  <div class="eyebrow">Poema 15 de 45</div>
+</article><article class="poem" id="poema-15" data-pages="21-22">
+  <div class="poem-kicker">Poema 15 · 21—22</div>
   <h2>Enseñando sin aprender</h2>
-  <div class="verses">Te fuiste,me fuí,
+  <div class="poem-rule"></div>
+  <div class="poem-text">Te fuiste,me fuí,
 nos dividimos,
 una nueva historia
 y nuevo mundo,
@@ -614,7 +669,6 @@ Intentando descifrar
 como fuimos tan ejemplarmente tercos,
 con mayor capacidad
 para sufrir que para soltar.
-
 Explorando los límites inhumanos
 de la vanidad,
 To orgullo fuerte como roca,
@@ -624,7 +678,6 @@ Mi arrogancia siempre presente
 como la sombra,
 la tuya invisible
 al paso de las horas.
-
 Y aún así
 solo me queda agradecer,
 por todo el tiempo
@@ -636,17 +689,16 @@ como la obra del artista,
 cómo pintar solo de negro
 el cielo que alguna vez
 tuvo estrellas.</div>
-  <div class="controls">
-    <a href="#poem-14">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-16">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-14">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-16">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-16">
-  <div class="eyebrow">Poema 16 de 45</div>
+</article><article class="poem" id="poema-16" data-pages="23-24">
+  <div class="poem-kicker">Poema 16 · 23—24</div>
   <h2>Oliste</h2>
-  <div class="verses">Supe que te ibas mucho antes de la despedida.
+  <div class="poem-rule"></div>
+  <div class="poem-text">Supe que te ibas mucho antes de la despedida.
 Me preparé para el dolor más amargo,
 pero ni eso bastó contra la acidez de tu partida.
 El pasar de las horas sobre el atardecer
@@ -662,7 +714,6 @@ Al llegar la cruda noche ya no siento tu nariz fría en mi espalda;
 ahora me quema la helada brisa impregnada en las sábanas.
 Pese a todo,
 la mancha ocre del techo sigue aquí,
-
 supongo que a ella no le importó que nunca la quisieras ahí.
 Si tocan a la puerta, ya no escucho a los gatos alertar de la presencia,
 solo me ensordece el vibrar de la insistencia.
@@ -675,17 +726,16 @@ ya no huele a cenizas de cigarro,
 tampoco a romero quemado ni a arena de gato.
 Y no huele mal.
 Ahora huele mucho peor.</div>
-  <div class="controls">
-    <a href="#poem-15">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-17">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-15">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-17">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-17">
-  <div class="eyebrow">Poema 17 de 45</div>
+</article><article class="poem" id="poema-17" data-pages="25-25">
+  <div class="poem-kicker">Poema 17 · 25—25</div>
   <h2>Amarte un milenio</h2>
-  <div class="verses">Prometo acomodar tu alma
+  <div class="poem-rule"></div>
+  <div class="poem-text">Prometo acomodar tu alma
 dentro de las quimeras de mi sueños,
 ser tu eterno amante
 y de tus besos el dueño.
@@ -701,54 +751,50 @@ los momentos que sellen nuestros pasos,
 sino hacer de estos
 la orquesta perfecta para las historias
 que tejemos cuando nos miramos,
-
 Hilar con la seda del gusano de la pasión,
 un abrigo exclusivo
 para esta bella ocasión.</div>
-  <div class="controls">
-    <a href="#poem-16">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-18">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-16">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-18">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-18">
-  <div class="eyebrow">Poema 18 de 45</div>
+</article><article class="poem" id="poema-18" data-pages="26-26">
+  <div class="poem-kicker">Poema 18 · 26—26</div>
   <h2>Debo y no quiero</h2>
-  <div class="verses">Quisiera enfermar,
+  <div class="poem-rule"></div>
+  <div class="poem-text">Quisiera enfermar,
 y que se me taparan las venas,
 para que esta sangre,
 que tantas veces hirvió por ti,
-ya no divague por mi cuerpo.
+ya no divague  por mi cuerpo.
 Que estos labios,
 en dónde tantas veces
 se congelo tu piel,
 ardieran al sentir un nuevo calor.
 Que a mi nariz necia,
-que no se olvida de tu olor,
+que no se olvida  de tu olor,
 sufriera amnesia
 y dejara de estar
 en un eterno estado de persecución,
 que ya no busque más
 en otras fragancias torrentes de tu ardor.
-
 Ojalá que estos ojos,
 que atravesaron el iris de tu alma
 desde la pupila hasta la mirada
 se llenaran de niebla,
 y olvidaran cómo te veías por última vez,
 la última noche que te besé.</div>
-  <div class="controls">
-    <a href="#poem-17">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-19">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-17">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-19">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-19">
-  <div class="eyebrow">Poema 19 de 45</div>
+</article><article class="poem" id="poema-19" data-pages="27-28">
+  <div class="poem-kicker">Poema 19 · 27—28</div>
   <h2>Eterno desolado</h2>
-  <div class="verses">Mi tímpano, torpe y confundido,
+  <div class="poem-rule"></div>
+  <div class="poem-text">Mi tímpano, torpe y confundido,
 no se adapta al temblor del silencio
 que se cierne al pasar de las horas.
 Y es que nunca te lo dije;
@@ -764,7 +810,6 @@ Ahora, divagaré mil años en la neblina,
 no dejaré de buscarte
 hasta que mis manos vuelvan a encontrarte.
 Pese a todo y todos,
-
 jamás hubiera querido el vacío;
 no saber más de ti,
 de si te encuentras bien,
@@ -776,7 +821,6 @@ te devoré las ganas de amar
 cuando estuviste a mi lado,
 y así pues ya no queda que comer,
 estando aquí triste acostado.
-
 Pero si antes muero
 por apuestas del destino,
 quiero que sepan
@@ -785,17 +829,16 @@ fue por buscarte en la oscuridad,
 y si en el día no desperté,
 fue por quererte, al fin,
 soñar en la eternidad.</div>
-  <div class="controls">
-    <a href="#poem-18">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-20">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-18">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-20">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-20">
-  <div class="eyebrow">Poema 20 de 45</div>
+</article><article class="poem" id="poema-20" data-pages="29-29">
+  <div class="poem-kicker">Poema 20 · 29—29</div>
   <h2>Excusa</h2>
-  <div class="verses">En un hito de falsa esperanza,
+  <div class="poem-rule"></div>
+  <div class="poem-text">En un hito de falsa esperanza,
 acurrucado sobre los hilos
 de la mediocridad,
 te prometí nunca excusarme por ti
@@ -809,17 +852,16 @@ y que exageraba con prevención
 bromeando en cada ocasión
 para restarle peso e incomodidad,
 era simplemente, ser yo.</div>
-  <div class="controls">
-    <a href="#poem-19">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-21">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-19">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-21">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-21">
-  <div class="eyebrow">Poema 21 de 45</div>
+</article><article class="poem" id="poema-21" data-pages="30-30">
+  <div class="poem-kicker">Poema 21 · 30—30</div>
   <h2>Espuma y nada más</h2>
-  <div class="verses">Quisiera regresar
+  <div class="poem-rule"></div>
+  <div class="poem-text">Quisiera regresar
 a quién sabe dónde,
 quién sabe por qué
 para poder gritar
@@ -836,22 +878,20 @@ buscar en un farol
 la luz que me falta de tus ojos.
 Rodeado de tanta agua
 y aún así me siento seco
-
 espero; cada tronar
 de la espuma de mar
 me abrace y cubra,
 como si se tratara de mi funeral.</div>
-  <div class="controls">
-    <a href="#poem-20">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-22">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-20">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-22">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-22">
-  <div class="eyebrow">Poema 22 de 45</div>
+</article><article class="poem" id="poema-22" data-pages="31-31">
+  <div class="poem-kicker">Poema 22 · 31—31</div>
   <h2>Tanto en tan poco</h2>
-  <div class="verses">Mirando a través de tus ojos
+  <div class="poem-rule"></div>
+  <div class="poem-text">Mirando a través de tus ojos
 sobre las ventanas de tu alma,
 descifré que no hace falta ir al cielo
 para encontrar un paraíso.
@@ -867,25 +907,23 @@ el tono rojo más bello
 y a su vez la máxima expresión del fuego.
 Contigo aprendí
 que no hace falta tocar para sentir
-
 que comer de tu risa,
 es lo único que necesito para vivir
 Si es necesario inventaré más horas,
 que de las veinticuatro del día
 quiero ocupar todas para estar contigo
 y aún así agregar una
-solo para cuando el &quot;adiós&quot; te digo.</div>
-  <div class="controls">
-    <a href="#poem-21">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-23">Siguiente →</a>
+solo para cuando el "adiós" te digo.</div>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-21">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-23">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-23">
-  <div class="eyebrow">Poema 23 de 45</div>
+</article><article class="poem" id="poema-23" data-pages="32-32">
+  <div class="poem-kicker">Poema 23 · 32—32</div>
   <h2>Pliegues del tiempo</h2>
-  <div class="verses">Cuántas veces he deseado
+  <div class="poem-rule"></div>
+  <div class="poem-text">Cuántas veces he deseado
 congelar el reloj,
 para que ni siquiera
 la gota de agua
@@ -901,17 +939,16 @@ Quizá algún día entendamos
 que el tiempo nunca nos envejeció;
 nosotros lo llenamos de arrugas
 de tanto que nos cuidó.</div>
-  <div class="controls">
-    <a href="#poem-22">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-24">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-22">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-24">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-24">
-  <div class="eyebrow">Poema 24 de 45</div>
+</article><article class="poem" id="poema-24" data-pages="33-33">
+  <div class="poem-kicker">Poema 24 · 33—33</div>
   <h2>Deseo Fugaz</h2>
-  <div class="verses">No sé si sea tu mayoría de edad
+  <div class="poem-rule"></div>
+  <div class="poem-text">No sé si sea tu mayoría de edad
 o lo perfecta que luces al caminar,
 pero quiero acariciar tu cabello negro
 y en un sueño contigo terminar
@@ -928,22 +965,20 @@ aunque ninguna alcanzaría a expresar,
 el torbellino que en mi pecho nace,
 cuando tu silueta me invita a soñar.
 Tu mirar es condena y es alivio,
-
 me atrapa, me consume, me da motivo,
 aunque la distancia me separe a veces
 de tu voz, mi corazón insiste
 que seas de mis latidos la razón.</div>
-  <div class="controls">
-    <a href="#poem-23">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-25">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-23">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-25">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-25">
-  <div class="eyebrow">Poema 25 de 45</div>
+</article><article class="poem" id="poema-25" data-pages="34-34">
+  <div class="poem-kicker">Poema 25 · 34—34</div>
   <h2>En todo momento me inspiras</h2>
-  <div class="verses">Escribo bastante inoportunamente,
+  <div class="poem-rule"></div>
+  <div class="poem-text">Escribo bastante inoportunamente,
 bajo la sombra del árbol más feo,
 esperando un autobús lleno.
 Bajo la lupa de muchos ojos y,
@@ -959,7 +994,6 @@ todo lo que te escribí.
 Pero creo que he encontrado una solución,
 ya construyo un poema con las estrellas
 para las noches que quieras
-
 mires hacia arriba
 y encuentres consuelo en ellas.
 Y ojalá, leyendo alguno de mis textos,
@@ -967,17 +1001,16 @@ recuerdes que bajo la misma luna
 hay una libreta en blanco
 que solo se llena
 con los cumplidos que le has dado.</div>
-  <div class="controls">
-    <a href="#poem-24">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-26">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-24">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-26">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-26">
-  <div class="eyebrow">Poema 26 de 45</div>
+</article><article class="poem" id="poema-26" data-pages="35-35">
+  <div class="poem-kicker">Poema 26 · 35—35</div>
   <h2>Todo te busca a ti</h2>
-  <div class="verses">No quieres que te llame &quot;mi mundo&quot;,
+  <div class="poem-rule"></div>
+  <div class="poem-text">No quieres que te llame "mi mundo",
 pero.
 Las constelaciones quieren copiar,
 la armonía de tus lunares
@@ -994,17 +1027,16 @@ la altura que tú tienes.
 Y la nieve se atormenta
 por no tocar,
 con la suavidad de tu piel.</div>
-  <div class="controls">
-    <a href="#poem-25">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-27">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-25">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-27">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-27">
-  <div class="eyebrow">Poema 27 de 45</div>
+</article><article class="poem" id="poema-27" data-pages="36-36">
+  <div class="poem-kicker">Poema 27 · 36—36</div>
   <h2>Solo, te digo</h2>
-  <div class="verses">Presente aquí,
+  <div class="poem-rule"></div>
+  <div class="poem-text">Presente aquí,
 en el lugar
 que solo tú me enseñaste,
 me cuestiono,
@@ -1021,28 +1053,26 @@ con tu nombre tatuado
 en cada sonrisa que doy.
 E Intento olvidar aquello
 que un dia me tuvo preso;
-
 el idioma del beso.
 Solo queda saber que tú,
 abrazada a la sombra de alguien más,
 ya inventaste una nueva forma
-de decir &quot;te amo&quot;.
+de decir  "te amo".
 Porque si tú,
 me decías que me amabas
 en varios idiomas,
 yo siempre te lo decía en el mismo
 pero lo escribía, en infinitas formas.</div>
-  <div class="controls">
-    <a href="#poem-26">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-28">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-26">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-28">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-28">
-  <div class="eyebrow">Poema 28 de 45</div>
+</article><article class="poem" id="poema-28" data-pages="37-38">
+  <div class="poem-kicker">Poema 28 · 37—38</div>
   <h2>Cenizas de noche</h2>
-  <div class="verses">En la penumbra licuada de la madrugada
+  <div class="poem-rule"></div>
+  <div class="poem-text">En la penumbra licuada de la madrugada
 tu figura ardía sin hacer incendio,
 como esas brasas que no alumbran
 pero condenan al tacto.
@@ -1059,7 +1089,6 @@ no era precisamente risa,
 era un filo suave,
 una forma elegante de
 quebrar el tiempo.
-
 Mis manos
 recorrieron la cartografía incierta de tu espalda,
 hallando en cada vértebra
@@ -1070,7 +1099,6 @@ mientras el tiempo, ebrio,
 tropezaba entre segundos inútiles.
 No hubo promesas.
 No hubo futuro.
-
 Solo ese instante dilatado,
 y un poco al azar
 casi sagrado,
@@ -1084,17 +1112,16 @@ tú me dejaste ardiendo sin fuego
 temblando sin frío,
 vivo,
 pero apenas.</div>
-  <div class="controls">
-    <a href="#poem-27">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-29">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-27">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-29">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-29">
-  <div class="eyebrow">Poema 29 de 45</div>
+</article><article class="poem" id="poema-29" data-pages="39-39">
+  <div class="poem-kicker">Poema 29 · 39—39</div>
   <h2>Impío</h2>
-  <div class="verses">Heme aquí,
+  <div class="poem-rule"></div>
+  <div class="poem-text">Heme aquí,
 producto de un frenesí
 de segundos,
 queriendo morir
@@ -1111,22 +1138,20 @@ nuestras cimentaciones.
 Controlar la tundra y el fuego,
 para estar en armonía
 en todas las estaciones.
-
 Pues si tu corazón es de hierba
 y sus sentimientos de aire,
 prometo fumar la hierba
 y esparcir humo de amor por el aire.</div>
-  <div class="controls">
-    <a href="#poem-28">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-30">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-28">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-30">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-30">
-  <div class="eyebrow">Poema 30 de 45</div>
+</article><article class="poem" id="poema-30" data-pages="40-40">
+  <div class="poem-kicker">Poema 30 · 40—40</div>
   <h2>Gramática para dos</h2>
-  <div class="verses">No quiero prometerte el cielo,
+  <div class="poem-rule"></div>
+  <div class="poem-text">No quiero prometerte el cielo,
 tiene la mala costumbre de caerse
 sobre quienes lo nombran demasiado.
 Quiero aprender contigo
@@ -1143,20 +1168,18 @@ sino con los pequeños actos
 que todos notan,
 pero nadie aplaude:
 servir dos tazas,
-
 pensarnos sin nombrarnos,
 volver sin hacer ruido</div>
-  <div class="controls">
-    <a href="#poem-29">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-31">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-29">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-31">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-31">
-  <div class="eyebrow">Poema 31 de 45</div>
+</article><article class="poem" id="poema-31" data-pages="41-41">
+  <div class="poem-kicker">Poema 31 · 41—41</div>
   <h2>Soneto</h2>
-  <div class="verses">Al sonar del crepitar de tus pasos,
+  <div class="poem-rule"></div>
+  <div class="poem-text">Al sonar del crepitar de tus pasos,
 quedé hipnotizado y lento
 hiciste a mi oído atento,
 a mi alma repartiste abrazos.
@@ -1164,25 +1187,22 @@ Por compañero llevabas al viento
 tu amiga, la luz que te marcaba
 aire tan ansioso no alcanzaba
 las notas de lo que es frío aliento
-
 Ojos tercos solo mirarte quieren,
 mi boca solo hablarte necesita
 cruel espera me tiene en penumbra.
-
 Puede que las manos se me quiebren
 la voz que te dirijo es finita
 pero mi pulso se acostumbra.</div>
-  <div class="controls">
-    <a href="#poem-30">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-32">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-30">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-32">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-32">
-  <div class="eyebrow">Poema 32 de 45</div>
+</article><article class="poem" id="poema-32" data-pages="42-42">
+  <div class="poem-kicker">Poema 32 · 42—42</div>
   <h2>Dinosaurio fatigado</h2>
-  <div class="verses">Me encuentro
+  <div class="poem-rule"></div>
+  <div class="poem-text">Me encuentro
 ciertamente cansado,
 cansado de pasar el día
 con los ojos empañados,
@@ -1198,17 +1218,16 @@ Si es que lo toco hasta en el viento
 y lo huelo hasta en el agua,
 no caben más llamas
 en el infierno que llevo por cuerpo.</div>
-  <div class="controls">
-    <a href="#poem-31">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-33">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-31">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-33">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-33">
-  <div class="eyebrow">Poema 33 de 45</div>
+</article><article class="poem" id="poema-33" data-pages="43-43">
+  <div class="poem-kicker">Poema 33 · 43—43</div>
   <h2>Titilar</h2>
-  <div class="verses">Me quedé,
+  <div class="poem-rule"></div>
+  <div class="poem-text">Me quedé,
 con las manos frías
 y el pecho caliente,
 con las estrellas
@@ -1225,20 +1244,18 @@ tan cerca
 que casi fuimos
 una constelación;
 para que tú brillaras
-
 más que nunca,
 sólo antes de apagarte.</div>
-  <div class="controls">
-    <a href="#poem-32">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-34">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-32">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-34">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-34">
-  <div class="eyebrow">Poema 34 de 45</div>
+</article><article class="poem" id="poema-34" data-pages="44-44">
+  <div class="poem-kicker">Poema 34 · 44—44</div>
   <h2>Lucha en la marea</h2>
-  <div class="verses">Cómo el mar arrastra la arena
+  <div class="poem-rule"></div>
+  <div class="poem-text">Cómo el mar arrastra la arena
 así arrastro yo mis miedos,
 aferrándome al recuerdo
 de lo que sí fuimos
@@ -1255,19 +1272,17 @@ Con un remo en una mano
 pero remando con las dos,
 fluyo en este colchón de azul maya
 esperando que algún día
-
 el mar se canse antes que yo</div>
-  <div class="controls">
-    <a href="#poem-33">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-35">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-33">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-35">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-35">
-  <div class="eyebrow">Poema 35 de 45</div>
+</article><article class="poem" id="poema-35" data-pages="45-46">
+  <div class="poem-kicker">Poema 35 · 45—46</div>
   <h2>La paz de los naufragios</h2>
-  <div class="verses">El primer trago es el que quema el labio,
+  <div class="poem-rule"></div>
+  <div class="poem-text">El primer trago es el que quema el labio,
 un sabor amarillo, de vinagre y ceniza.
 La indiferencia llega sin aviso,
 como una mano fría que te borra la risa.
@@ -1277,14 +1292,13 @@ quien camina derecho por la ruta
 mientras por dentro se le apaga la fragua.
 Es tan fácil mentirse por las noches,
 mirar el techo y celebrar la calma.
-Decir: &quot;Ya nada duele, ya no hay reproches&quot;,
+Decir: "Ya nada duele, ya no hay reproches",
 mientras se vuelve de granito el alma.
 Pero esa paz es una trampa mansa,
 un territorio de aguas estancadas;
 el cuerpo sigue, pero el pecho cansa
 de sostener verdades simuladas.
 Quien se inmuniza contra el daño ajeno
-
 termina por perder también el fuego.
 Se vuelve un habitante de lo ajeno,
 un hombre ciego jugando a su propio juego.
@@ -1292,24 +1306,22 @@ un hombre ciego jugando a su propio juego.
 si para no sufrirlo te congelas?
 Vivir invicto en un invierno torpe
 donde no alumbran ni las viejas velas.
-
 Prefiero mil veces el latido herido,
 el ácido que arde y que despierta,
 saber que estoy de pie, que no me he ido,
 que la piel sigue con la puerta abierta.
 Porque la paz que se compra con olvido
 no es paz, es solo una bandera muerta.</div>
-  <div class="controls">
-    <a href="#poem-34">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-36">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-34">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-36">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-36">
-  <div class="eyebrow">Poema 36 de 45</div>
+</article><article class="poem" id="poema-36" data-pages="47-47">
+  <div class="poem-kicker">Poema 36 · 47—47</div>
   <h2>Geometría de la lluvia</h2>
-  <div class="verses">Abro los ojos justo a mitad del beso, solo cuando llueve.
+  <div class="poem-rule"></div>
+  <div class="poem-text">Abro los ojos justo a mitad del beso, solo cuando llueve.
 No lo hago por desconfianza del agua,
 sino porque la tormenta necesita testigos
 y yo necesito comprobar que el mundo no te está borrando.
@@ -1326,7 +1338,6 @@ veo la forma exacta de esto que sentimos.
 Una superficie que se dobla pero que sostiene el peso.
 Dicen que la lluvia es la insistencia del olvido,
 un llanto abstracto que termina por lavarlo todo.
-
 Pero yo te muerdo los labios húmedos y pienso en lo que no muere.
 Pienso en la materia que resiste,
 en la pequeña eternidad de bolsillo que nos inventamos
@@ -1336,17 +1347,16 @@ donde dos cuerpos se vuelven refugio y frontera al mismo tiempo.
 Abro los ojos bajo el agua
 solo para confirmar que la memoria, si es que existe,
 tiene que parecerse mucho a tu piel empapada.</div>
-  <div class="controls">
-    <a href="#poem-35">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-37">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-35">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-37">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-37">
-  <div class="eyebrow">Poema 37 de 45</div>
+</article><article class="poem" id="poema-37" data-pages="48-49">
+  <div class="poem-kicker">Poema 37 · 48—49</div>
   <h2>La casa deshabitada</h2>
-  <div class="verses">He pasado tantas veces frente al espejo de pasillo
+  <div class="poem-rule"></div>
+  <div class="poem-text">He pasado tantas veces frente al espejo de pasillo
 sin el valor exacto para sostenerle la mirada al vidrio.
 Ya no recuerdo el color de mi propio iris cuando le da la luz,
 ni la forma en que mis ojos se achican cuando algo duele.
@@ -1363,7 +1373,6 @@ extranjero en el único territorio donde se suponía que estaba a salvo.
 Hace meses que no me toco el cuerpo,
 no por pudor, sino por un descuido burocrático del alma.
 Ya no sé si mis manos conservan la suavidad de antes
-
 o si tienen la aspereza de las cosas que se abandonan a la intemperie.
 Se han vuelto dos herramientas pesadas al final de los brazos,
 útiles para cargar objetos, para escribir palabras,
@@ -1374,24 +1383,22 @@ El invierno no viene de afuera, brota de las costillas,
 y es entonces cuando se extraña el calor de los abrazos.
 Esa costura breve de dos cuerpos que frena el viento de golpe,
 ese recordatorio táctil de que todavía estamos vivos.
-
 Porque es difícil pedirle a alguien que te abrigue
 cuando tú mismo no encuentras el interruptor para encender tu propio centro.
 Aquí sigo, de pie en el centro de una habitación desierta,
 esperando que el tacto regrese, que los ojos vuelvan a mirarme desde el fondo,
 y que el cuerpo deje de ser un hospedaje de paso
 para volver a ser mi hogar.</div>
-  <div class="controls">
-    <a href="#poem-36">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-38">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-36">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-38">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-38">
-  <div class="eyebrow">Poema 38 de 45</div>
+</article><article class="poem" id="poema-38" data-pages="50-51">
+  <div class="poem-kicker">Poema 38 · 50—51</div>
   <h2>La costura del tiempo</h2>
-  <div class="verses">He conseguido el cuaderno más pequeño de la existencia.
+  <div class="poem-rule"></div>
+  <div class="poem-text">He conseguido el cuaderno más pequeño de la existencia.
 Uno de esos que caben en el hueco cerrado del puño,
 donde las hojas son apenas del tamaño de un sello postal.
 Lo hice a propósito, casi como un acto de defensa propia.
@@ -1399,7 +1406,7 @@ Sé cómo me pongo cuando se trata de hablar de nosotros:
 tiendo a desbordarme, a llenar páginas enteras con el inventario de tus gestos.
 Necesito límites.
 Necesito que el papel físico me obligue a morderme la lengua
-y me diga &quot;basta&quot; cuando intente exagerar la eternidad.
+y me diga "basta" cuando intente exagerar la eternidad.
 Tal vez solo reduciendo el espacio encuentre la manera
 de darle a nuestra historia un tiempo prudente.
 Amarte, después de todo, ha sido un oficio muy humano,
@@ -1408,7 +1415,6 @@ No es un relámpago que cae del cielo y lo cambia todo;
 es pasar el hilo con cuidado, punto por punto, fila por fila.
 A veces apretamos demasiado la hebra y el tejido se encoge,
 otras veces lo dejamos tan flojo que el frío se cuela por los huecos.
-
 Pero la belleza está en esa imperfección de costurero:
 saber desatar el nudo sin romperlo, jalar con suavidad y volver a empezar desde la última fila.
 En estas páginas minúsculas no caben los discursos eternos,
@@ -1418,7 +1424,6 @@ el café que se enfría en la mesa, tu risa haciendo eco en el pasillo,
 el peso exacto de tu mano cuando caminamos sin rumbo fijo.
 Un tiempo prudente es esto: no correr hacia los años que todavía no existen,
 aprender a estirar el presente para que nos quepa el día completo.
-
 Escribir en lo pequeño me obliga a elegir las palabras con pinzas;
 si el papel es escaso, cada letra tiene que ser un pedazo de verdad desnuda.
 Ya estoy llegando a la última hoja del cuaderno,
@@ -1430,17 +1435,16 @@ Voy a ponerle a esto un broche especial, un seguro contra el viento:
 no quiero que seamos un incendio que arrase con el bosque entero,
 prefiero que seamos la aguja que se queda clavada, callada,
 uniendo con firmeza los dos lados de la prenda.</div>
-  <div class="controls">
-    <a href="#poem-37">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-39">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-37">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-39">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-39">
-  <div class="eyebrow">Poema 39 de 45</div>
+</article><article class="poem" id="poema-39" data-pages="52-52">
+  <div class="poem-kicker">Poema 39 · 52—52</div>
   <h2>El hallazgo</h2>
-  <div class="verses">Te buscas.
+  <div class="poem-rule"></div>
+  <div class="poem-text">Te buscas.
 Con los dedos cansados.
 Revisas los bolsillos,
 las esquinas del cuarto,
@@ -1457,7 +1461,6 @@ Dejo que pase el tiempo.
 Y de pronto,
 lo encuentro.
 Eso que te falta.
-
 Eso que no ves.
 Está en la curva floja de tus hombros.
 En tu manera humana de salvarte.
@@ -1467,19 +1470,17 @@ que a ti se te escapa siempre
 y a mí se me queda clavado.
 No te canses.
 Ya no busques a oscuras.
-Lo que tú te niegas,
-mis versos te lo guardan.</div>
-  <div class="controls">
-    <a href="#poem-38">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-40">Siguiente →</a>
+Lo que tú niegas, mis versos te lo guardan.</div>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-38">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-40">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-40">
-  <div class="eyebrow">Poema 40 de 45</div>
+</article><article class="poem" id="poema-40" data-pages="53-54">
+  <div class="poem-kicker">Poema 40 · 53—54</div>
   <h2>La pecera de diamante</h2>
-  <div class="verses">A veces desconfío de la voz que me cuenta.
+  <div class="poem-rule"></div>
+  <div class="poem-text">A veces desconfío de la voz que me cuenta.
 Ese consciente narrativo que se adueña de mis días,
 que insiste en ordenar mi historia siempre en prosa,
 pero una prosa rota, llena de aristas vivas,
@@ -1496,7 +1497,6 @@ aunque quemen al salir.
 Para el mundo exterior guardo la liviandad.
 Predico un enunciado ligero cada mañana, un saludo cualquiera,
 mientras dejo que el tiempo pase con su juego de espejos.
-
 Cada hora que transcurre parece una mariposa mansa,
 un parpadeo de alas de colores en el aire;
 pero es un disfraz.
@@ -1507,7 +1507,6 @@ Es un ciclo extraño: sudo este líquido, lo bebo para no morir,
 lo transpiro por los poros en cada verso que intento.
 Es el mismo veneno creativo que me mantiene despierto,
 que brota tanto y con tanta fuerza que me nubla la vista.
-
 Por un momento, viendo el desastre, llego a creer que he fundado un océano,
 que soy un náufrago en mitad de un mar bravío e interminable.
 Pero la realidad siempre impone sus paredes transparentes.
@@ -1516,24 +1515,22 @@ el agua choca de frente contra el límite.
 Todo este oleaje ruidoso, este simulacro de tormenta que me ahoga,
 nunca fue el mar abierto,
 sino el agua estancada de mi propia pecera.</div>
-  <div class="controls">
-    <a href="#poem-39">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-41">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-39">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-41">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-41">
-  <div class="eyebrow">Poema 41 de 45</div>
+</article><article class="poem" id="poema-41" data-pages="55-56">
+  <div class="poem-kicker">Poema 41 · 55—56</div>
   <h2>El idioma de los incendios</h2>
-  <div class="verses">Qué manual tan absurdo me ha tocado descifrar.
+  <div class="poem-rule"></div>
+  <div class="poem-text">Qué manual tan absurdo me ha tocado descifrar.
 Mirar el tono de tu pelo por las mañanas
 para saber si el día viene con sol o con tormenta,
 como si tu cabello fuera el único mapa disponible
 en un territorio que cambia de nombre cada noche.
 Es un faro intermitente, la única señal física
 en medio de un oleaje que nunca sé cómo atajar.
-
 Me he vuelto un especialista en interpretar ruidos y fricciones.
 Tengo que traducir la frecuencia exacta de tus gritos,
 la prisa de tus llamadas que a veces solo buscan comprobar que sigo aquí,
@@ -1542,45 +1539,38 @@ como si te diera miedo tocar demasiado y descubrir de qué estamos hechos.
 Pasas de la distancia más fría a esos arranques de pasión
 donde me buscas con los dientes, con rabia,
 como queriendo salvarte de un edificio que se cae.
-
 Y aquí me tienes, escarbando entre los escombros de tus días malos.
 Buscando una moraleja oculta dentro de tanto desperfecto,
 una lección de cordura que justifique las ojeras
 o el sentido de este cuento que insiste en escribirse con vidrios rotos.
-
 Es difícil encontrarle el orden a una casa que prefiere las goteras;
 reviso tus esquinas rotas, tus palabras hirientes,
 intentando descifrar si esto es amor
 o simplemente una costumbre hermosa de hacernos daño.
-
 Dices, o pienso, que debo domar tu corazón de una vez por todas.
 Ponerle un bozal a tus demonios para que nos dejen dormir en paz.
 Pero no sé si se puede domesticar el fuego sin terminar apagándolo,
 ni si tu belleza resistiría la calma de un jardín ordenado.
-
 Tal vez el error está en querer ponerle frenos a la caída.
 Porque un corazón que vive en el desastre no busca un domador,
 busca a alguien que no le tenga miedo a las cenizas.</div>
-  <div class="controls">
-    <a href="#poem-40">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-42">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-40">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-42">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-42">
-  <div class="eyebrow">Poema 42 de 45</div>
+</article><article class="poem" id="poema-42" data-pages="57-58">
+  <div class="poem-kicker">Poema 42 · 57—58</div>
   <h2>El truco de los relojes rotos</h2>
-  <div class="verses">A veces me cansa ver cómo la luz se mueve por la pared.
+  <div class="poem-rule"></div>
+  <div class="poem-text">A veces me cansa ver cómo la luz se mueve por la pared.
 Esa sombra del marco de la ventana
 que avanza despacio por el piso del cuarto,
 como un segundero mudo que nos viene a corretear.
-
 Por eso espero, con una paciencia terca,
 el día en que el cielo se quede por fin estático,
 en un solo tono fijo y tibio,
 cansado de mudar de piel cada doce horas.
-
 Que el sol se retire de una vez sin hacer ruido
 y que la luna se acomode arriba, como un foco limpio,
 sin prisa por esconderse detrás de los techos.
@@ -1588,7 +1578,6 @@ Quiero quitar del medio los amaneceres,
 los calendarios colgados en la cocina,
 el desgaste diario de ver cómo se nos va la tarde
 mientras intentamos descifrar lo que somos.
-
 Lo hago por ti, corazón, porque te conozco.
 Para que ya no tengas forma de mirar el reloj de reojo,
 para que no te asuste el conteo de los meses
@@ -1600,7 +1589,6 @@ Si el cielo deja de cambiar de color afuera,
 se te va a olvidar por completo llevar la cuenta.
 No sabrás si llevamos diez minutos o tres años
 siendo este mismo nudo de piel en mitad de la cama.
-
 No habrá lunes ni domingos para marcar la prisa,
 solo este presente largo, plano y seguro,
 donde el invierno y el verano valen exactamente lo mismo.
@@ -1608,17 +1596,16 @@ Quiero borrar la urgencia de tus ojos.
 Que dejes de medir lo nuestro por los años que se acumulan,
 y empieces a medirlo por las veces en que, estando juntos,
 el mundo se cansa de girar.</div>
-  <div class="controls">
-    <a href="#poem-41">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-43">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-41">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-43">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-43">
-  <div class="eyebrow">Poema 43 de 45</div>
+</article><article class="poem" id="poema-43" data-pages="59-60">
+  <div class="poem-kicker">Poema 43 · 59—60</div>
   <h2>La paz de las almas rotas</h2>
-  <div class="verses">El fuego que nos quema por dentro tiene una prisa extraña
+  <div class="poem-rule"></div>
+  <div class="poem-text">El fuego que nos quema por dentro tiene una prisa extraña.
 Se enciende de golpe, nos consume las manos y nos deja a oscuras en el mismo cuarto de siempre,
 con los dedos oliendo a pólvora seca.
 Me pregunto, mirando el techo, por qué es así de fugaz el deseo que siento por ti, como una llama
@@ -1630,18 +1617,15 @@ espeso, donde la memoria se pone a revisar los cajones viejos, donde el dolor se
 física en la cama. Cada suspiro que doy en las noches mi dama, es el recuerdo de las heridas que
 dejaste en mi alma. No hay tregua para el aire que entra en el pecho; respirar, a veces, es solo volver a
 abrir la costura de los golpes que no se ven a simple vista.
-
 El llanto también se cansa, el pozo se queda seco y llega un día en que los ojos eligen la piedra antes
 que el agua. Con el pulso todavía temblando por lo que fuimos, te escribo estos versos disonantes
 porque ya no te bebo en mis mares de llanto, espero que sea dónde sea que descanses tu cuerpo de
 laureles no intentes dibujarte con otros pinceles.
-
 Tu silueta le pertenece a la verdad que nos inventamos, y da miedo pensar que otra mano intente
 borrar tus contornos.
 A pesar de la distancia y de los escombros que dejamos al salir, sé perfectamente que tu brillo no se
 apaga fácilmente. Hay personas que nacen con un faro por dentro, destinadas a rescatar a los que
 andamos perdidos en la niebla.
-
 La luz que en ti náufraga es de los milagros el más bello, dulce resplandor nunca dejes de titilar, eres
 esa esencia que guía a muchos a navegar. Sigue encendida, linda, aunque mis ojos ya no sean los que
 miren tu orilla.
@@ -1649,17 +1633,16 @@ El tiempo termina por acomodar la mesa y limpiar los vidrios rotos del suelo. Se
 de buscarnos en los rincones y la rabia de sabernos incompletos. Libre estoy, estás, ya podemos
 caminar en paz, en la disonancia de estos versos espero encontrar el refugio que a nuestras almas
 nunca pudo llegar.</div>
-  <div class="controls">
-    <a href="#poem-42">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-44">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-42">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-44">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-44">
-  <div class="eyebrow">Poema 44 de 45</div>
+</article><article class="poem" id="poema-44" data-pages="61-62">
+  <div class="poem-kicker">Poema 44 · 61—62</div>
   <h2>La física del abismo</h2>
-  <div class="verses">Afuera el mundo se rompía con el ruido sordo de las cosas viejas,
+  <div class="poem-rule"></div>
+  <div class="poem-text">Afuera el mundo se rompía con el ruido sordo de las cosas viejas,
 pero tú tenías los ojos fijos en la ventana,
 lejos de la rabia y del lodo de las calles.
 Sonreías a la luna,
@@ -1671,14 +1654,12 @@ en mitad de un edificio que se quema.
 Mientras los demás buscaban un techo seguro,
 una mentira cómoda donde esconder el miedo,
 tú elegías la altura, la intemperie y el riesgo.
-
 Al borde de la cornisa
 sentías más calma
 que en ningún otro lugar.
 El vacío abajo no te daba vértigo;
 te daba el espacio exacto que te hacía falta
 para respirar sin que nadie te pisara la sombra.
-
 La piedra fría del cemento te devolvía el tacto,
 te recordaba de qué materia estabas hecha.
 Con los pies descalzos
@@ -1687,29 +1668,27 @@ El mundo puede gritar desde el suelo que estás perdida,
 pero eres tú quien decide, desde arriba,
 si el viento que te empuja es una amenaza
 o es solo una invitación para empezar a flotar.
-
 Quédate ahí arriba, donde el aire es más puro.
 Que abajo sigan corriendo las prisas y las penas de los hombres.
 Tú ya aprendiste el secreto de los que no se rompen:
 que para salvarse de la tierra,
 a veces hay que aprender a vivir en la orilla.</div>
-  <div class="controls">
-    <a href="#poem-43">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#poem-45">Siguiente →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-43">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-45">Siguiente →</a>
   </div>
-</article>
-
-<article class="poem" id="poem-45">
-  <div class="eyebrow">Poema 45 de 45</div>
+</article><article class="poem" id="poema-45" data-pages="63-64">
+  <div class="poem-kicker">Poema 45 · 63—64</div>
   <h2>El libreto del silencio</h2>
-  <div class="verses">Hay una presencia muda que camina conmigo cuando las luces de la calle se apagan. No es la
+  <div class="poem-rule"></div>
+  <div class="poem-text">Hay una presencia muda que camina conmigo cuando las luces de la calle se apagan. No es la
 soledad vacía de los cuartos abandonados, sino un cómplice fiel que cuida la espalda sin hacer ruido,
 una sombra que sabe medir el pulso de mis horas más bajas.
 Sigilo valiente, no acompaña,
 pero tampoco abandona.
 Sabe perfectamente cuándo quedarse quieto y cuándo empujar; puede ser en exceso frío como la
-tundra o, si te le acercas demasiado, al por menor, ardiente cuál fuego. Un termómetro extremo
+tundra o, si te le acercas demasiado, al por menor, ardiente cual fuego. Un termómetro extremo
 para un pecho que nunca sabe estar templado.
 Este testigo mudo tiene dos caras, como las monedas viejas que se guardan en el cajón. Sabe vestirse
 de luto o de tregua según le convenga a la cabeza, transformando el piso del cuarto en las tablas de
@@ -1717,12 +1696,11 @@ un escenario invisible.
 Sigilo negro, sigilo blanco
 haz de mis noches una obra de teatro
 donde la mesa sea la escenografía y la lámpara el único reflector.
-Qué el telón se abra en mi mejor momento
+Que el telón se abra en mi mejor momento
 y desaparezcas tú,
 para en el fondo aplaudir lento.
 Porque tú y yo sabemos que el verdadero triunfo no es el ruido del mundo, sino el eco callado que
 dejas en la oscuridad cuando te retiras a los palcos.
-
 Eres el niño que le tenía miedo al monstruo debajo de la cama y, al mismo tiempo, el viejo cansado
 que se sienta a esperar que se disipe la última tormenta del año.
 Sigilo niño, sigilo viejo
@@ -1730,7 +1708,6 @@ mirémonos las manos antes de que la prisa del día regrese a borrarnos. Todaví
 los dedos y suficiente noche en las ventanas.
 convirtamos mi lienzo,
 en nuestra obra perfecta.
-
 Un cuadro hecho de ausencias, de trazos firmes que no necesitan explicarse a nadie y de verdades
 que solo se sostienen cuando el resto del mundo se ha ido a dormir.
 Al final, cuando amanezca y el ruido de la ciudad limpie tu rastro, sé que te quedarás agazapado
@@ -1739,19 +1716,222 @@ el peso de la función.
 Cualquiera puede gritar cuando la casa se le viene encima,
 pero solo nosotros sabemos cómo arder
 sin que los demás noten el humo.</div>
-  <div class="controls">
-    <a href="#poem-44">← Anterior</a>
-    <a href="#indice">Índice</a>
-    <a href="#indice">Índice →</a>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-44">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-46">Siguiente →</a>
+  </div>
+</article><article class="poem" id="poema-46" data-pages="65-65">
+  <div class="poem-kicker">Poema 46 · 65—65</div>
+  <h2>Páramo</h2>
+  <div class="poem-rule"></div>
+  <div class="poem-text">Qué haré ahora con mis labios
+sin tu boca para llenarlos,
+va perdiendo sentido
+toda interpretación de tus sombras
+que no sea la de mis ojos.
+Dónde posaré mi mano
+si no estan tus dedos para enredarlas
+Se irán prendiendo en una sola llama
+todos los hilos que llevo por venas,
+no los apagará ni la humedad
+que de mí emana,
+aun así, si lo cree prudente,
+el vapor saldrá apresurado hacia el cielo
+buscando alcanzar una estela de ti
+que lo guíe;
+de tus pies a tu cadera
+de tu cadera a tu espalda
+y de tu espalda al cuello
+así como tantas veces lo acostumbraste tú.
+Seguirá el amanecer
+como el frío más intenso del día,
+solo me vendrá a recordar
+que me he vuelto incapaz de sentir gozo
+con alguna imitación de ardor
+que no sea la de tus ojos sobre los míos,
+pero que tampoco podré congelarme
+si no estás tú para tocarme.</div>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-45">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-47">Siguiente →</a>
+  </div>
+</article><article class="poem" id="poema-47" data-pages="66-66">
+  <div class="poem-kicker">Poema 47 · 66—66</div>
+  <h2>Tornasol</h2>
+  <div class="poem-rule"></div>
+  <div class="poem-text">En la precaria existencia de mi ser
+te guardo un hueco,
+algo cerca de mis pulmones
+para respirarte,
+pero lo suficientemente
+lejos de mi corazón
+para no reventar.
+Tiene la apariencia de un lirio vacío
+y los colores tornasol
+del cuello de una paloma,
+solo que este no vuela
+apenas revolotea.
+Y allí,
+fluyendo sobre un tajo de memoria
+todavía flota.
+No es cascada,
+es lo que siempre desborda
+pero nunca se llena,
+y moja tanto
+cómo quien quiere extinguir el sol.
+anclado siempre a mí,
+como raíz que busca el agua
+que jamás encuentra.</div>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-46">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-48">Siguiente →</a>
+  </div>
+</article><article class="poem" id="poema-48" data-pages="67-67">
+  <div class="poem-kicker">Poema 48 · 67—67</div>
+  <h2>Cabras</h2>
+  <div class="poem-rule"></div>
+  <div class="poem-text">No es nuestra culpa querernos tanto,
+amar nunca será malo.
+Si nos conocimos en fuga
+con el rostro cubierto
+y nunca nos vimos
+de los labios a los ojos
+y de los ojos a los labios
+de vuelta.
+En ciertas pausas
+déjamos de ser escapistas
+para buscar en el otro
+alguna forma de refugio.
+Sabíamos perfectamente que nosotros
+estaríamos aquí mañana,
+pero no sabíamos
+si nuestro deseo también.
+Incontables promesas
+fugaces como el viento
+de escapar de este lugar
+que amaba por tí
+pero lo odiaba
+por todo lo demás
+incluso por haber nacido en el.</div>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-47">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-49">Siguiente →</a>
+  </div>
+</article><article class="poem" id="poema-49" data-pages="68-68">
+  <div class="poem-kicker">Poema 49 · 68—68</div>
+  <h2>Llamado del cansancio</h2>
+  <div class="poem-rule"></div>
+  <div class="poem-text">Ya van varios días enfermo de tí,
+ven y cúrame.
+No puedo seguir
+correteandote en mi mente,
+escapa de esta ilusión
+que ya mis pasos se han cansado
+de seguir los tuyos.
+No cuelgues mi llamada a la mitad,
+no ves que no sé
+quedarme con el teléfono en la mano.
+Busca en los sitios donde aún me escondo
+hasta que halles una razón para quedarte.
+Llegará el día que sane
+no sé cuándo,
+tampoco sé si tú lo lograrás,
+porque sé
+que donde no amas, no demoras.</div>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-48">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-50">Siguiente →</a>
+  </div>
+</article><article class="poem" id="poema-50" data-pages="69-70">
+  <div class="poem-kicker">Poema 50 · 69—70</div>
+  <h2>El arte en tu ser</h2>
+  <div class="poem-rule"></div>
+  <div class="poem-text">Leyendo entre las líneas de tus pestañas
+encuentro mis versos favoritos.
+Mirando tus ojos
+con pinceladas carmín
+paralelos a un blanco de torrente,
+ya no te estoy viendo a tí,
+en mis pupilas estás presente.
+Tú piel hecha partitura
+convierte en notas tus lunares,
+siguiendo el compás de tu figura
+hacen que la música de ti emane
+El viento deja que lo guíes
+por la arquitectura
+que solo en ti se puede hallar;
+el arco de tu nariz a los labios,
+la moldura de la palma de tus manos.
+Cuando caminas
+hasta el silencio quiere
+aprender tus pasos.
+Cuando te miran
+hasta los escultores quieren
+replicar tus brazos.
+Y cuando me miras
+yo no quiero nada;
+nada que no haya escrito antes por ti.
+Detendría el tiempo
+cuando te miro,
+solo para fotografiar la escena
+donde tus ojos coinciden con los míos.
+Pues soy un artista,
+solo porque retrato tu arte.</div>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-49">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <a class="nav-btn" href="#poema-51">Siguiente →</a>
+  </div>
+</article><article class="poem" id="poema-51" data-pages="71-71">
+  <div class="poem-kicker">Poema 51 · 71—71</div>
+  <h2>Cánticos</h2>
+  <div class="poem-rule"></div>
+  <div class="poem-text">Cantares de mi alma te comparto,
+que no son más
+que un simple trasto,
+trastabillando en esta vida voy pasando
+entonando cantares
+que tu corazón irán tocando.
+Te comparto tanto de lo poco que tengo,
+tanto que a veces pienso
+tener más de lo que en realidad debo.
+Te postergo la vida y te alargo la muerte,
+la muerte mía sería ya no verte.
+Vierte en mí
+lo poco que te queda para vivir
+que todo pasará,
+no hay cielos azules
+que no hayan tenido una nube gris.
+Bésame eternamente
+y huyamos de aquí,
+vayamos detrás del mar
+por encima del viento,
+ya quiero que sepas
+que cuando hablo con
+el corazón nunca miento.</div>
+  <div class="poem-nav">
+    <a class="nav-btn" href="#poema-50">← Anterior</a>
+    <a class="index-btn" href="#indice">Índice</a>
+    <span class="nav-btn disabled">Siguiente →</span>
   </div>
 </article>
-
+<section class="thanks container" aria-labelledby="thanks-title">
+  <div class="thanks-inner">
+    <div class="eyebrow">Después de la última página</div>
+    <h2 id="thanks-title">Gracias por llegar hasta aquí.</h2>
+    <p>Gracias por detenerte en estas páginas, por leer despacio y por permitir que estas palabras encuentren un lugar fuera de mí.</p>
+    <p>Este poemario nació de experiencias que alguna vez estuvieron demasiado cerca y de otras que terminaron demasiado lejos.</p>
+    <p>Si alguna palabra de aquí encontró algo en ti, entonces quizá el libro ya encontró su destino.</p>
+    <div class="ornament">✦</div>
+    <div class="signature">Gracias por leer.<br><br>— Rubén “Drucillo”</div>
+  </div>
 </section>
 </main>
-
-<footer>
-  De mí para nadie · Un inventario de cercanía y lejanía<br>
-  Drucillo · 2026
-</footer>
+<footer>De mí para nadie · Rubén “Drucillo”<br>51 poemas · edición web de lectura</footer>
 </body>
 </html>
