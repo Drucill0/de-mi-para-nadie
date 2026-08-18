@@ -1,0 +1,1757 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>De mí para nadie — Drucillo</title>
+<meta name="description" content="De mí para nadie: Un inventario de cercanía y lejanía. Un poemario de Drucillo.">
+<style>
+:root{--paper:#eee9df;--ink:#262321;--muted:#777068;--line:#cfc7bb;--soft:#e4ddd2}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:Georgia,"Times New Roman",serif}
+a{color:inherit}
+.hero{min-height:88vh;padding:9vw 7vw;display:flex;align-items:flex-end;border-bottom:1px solid var(--line)}
+.hero-inner{max-width:1000px}
+.kicker,.eyebrow{font:600 11px/1.2 Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:var(--muted)}
+h1{font-size:clamp(58px,11vw,140px);line-height:.82;font-weight:400;letter-spacing:-.05em;margin:28px 0 32px}
+.subtitle{font-size:clamp(21px,3vw,32px);color:var(--muted);max-width:720px;margin:0}
+.author{margin-top:65px;font-size:20px;font-style:italic}
+.enter{display:inline-block;margin-top:38px;padding:14px 20px;border:1px solid var(--ink);text-decoration:none;font:600 11px Arial,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+.section{max-width:1120px;margin:auto;padding:110px 7vw}
+h2{font-size:clamp(40px,6vw,70px);font-weight:400;line-height:.95;margin:12px 0 35px}
+.lead{font-size:20px;line-height:1.65;max-width:700px;color:#514b46}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));border-top:1px solid var(--line);border-left:1px solid var(--line);margin-top:55px}
+.card{background:transparent;min-height:190px;padding:25px;text-align:left;display:flex;flex-direction:column;justify-content:space-between;text-decoration:none;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:.2s}
+.card:hover{background:var(--soft);transform:translateY(-2px)}
+.num,.read{font:600 10px Arial,sans-serif;letter-spacing:.15em;color:var(--muted);text-transform:uppercase}
+.title{font-size:27px;line-height:1.05;max-width:220px}
+.poem{max-width:850px;margin:auto;padding:120px 7vw 80px;border-top:1px solid var(--line);scroll-margin-top:20px}
+.poem h2{font-size:clamp(48px,8vw,82px);margin:18px 0 70px;letter-spacing:-.03em}
+.verses{font-size:clamp(19px,2.2vw,23px);line-height:1.9;white-space:pre-line}
+.controls{display:flex;justify-content:space-between;gap:15px;margin-top:90px;padding-top:25px;border-top:1px solid var(--line)}
+.controls a{font:600 10px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;color:var(--muted)}
+footer{padding:70px 7vw;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+@media(max-width:650px){
+.hero{min-height:82vh;padding:55px 22px}
+.section{padding:80px 22px}
+.poem{padding:85px 22px 65px}
+.poem h2{margin-bottom:55px}
+.verses{font-size:18px;line-height:1.9}
+.controls{margin-top:65px}
+}
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="hero-inner">
+    <div class="kicker">Un poemario de Drucillo</div>
+    <h1>De mí<br>para nadie</h1>
+    <p class="subtitle">Un inventario de cercanía y lejanía</p>
+    <div class="author">Rubén “Drucillo”</div>
+    <a class="enter" href="#indice">Entrar al poemario</a>
+  </div>
+</header>
+
+<main>
+<section class="section" id="indice">
+  <div class="eyebrow">El libro</div>
+  <h2>Índice</h2>
+  <p class="lead">Cuarenta y cinco textos reunidos en un inventario de cercanías, despedidas, memoria, deseo y silencio.</p>
+  <div class="grid">
+    <a class="card" href="#poem-1"><span class="num">01</span><span class="title">Ventanas al alma</span><span class="read">Leer →</span></a><a class="card" href="#poem-2"><span class="num">02</span><span class="title">Velada tomada</span><span class="read">Leer →</span></a><a class="card" href="#poem-3"><span class="num">03</span><span class="title">Trillas</span><span class="read">Leer →</span></a><a class="card" href="#poem-4"><span class="num">04</span><span class="title">Nuestro limbo</span><span class="read">Leer →</span></a><a class="card" href="#poem-5"><span class="num">05</span><span class="title">Kiara</span><span class="read">Leer →</span></a><a class="card" href="#poem-6"><span class="num">06</span><span class="title">Lío</span><span class="read">Leer →</span></a><a class="card" href="#poem-7"><span class="num">07</span><span class="title">Árnica</span><span class="read">Leer →</span></a><a class="card" href="#poem-8"><span class="num">08</span><span class="title">Desaires carmín</span><span class="read">Leer →</span></a><a class="card" href="#poem-9"><span class="num">09</span><span class="title">Pavesa</span><span class="read">Leer →</span></a><a class="card" href="#poem-10"><span class="num">10</span><span class="title">Namor</span><span class="read">Leer →</span></a><a class="card" href="#poem-11"><span class="num">11</span><span class="title">Olivos de amor</span><span class="read">Leer →</span></a><a class="card" href="#poem-12"><span class="num">12</span><span class="title">Días especiales</span><span class="read">Leer →</span></a><a class="card" href="#poem-13"><span class="num">13</span><span class="title">De grumete a almirante</span><span class="read">Leer →</span></a><a class="card" href="#poem-14"><span class="num">14</span><span class="title">Bravo</span><span class="read">Leer →</span></a><a class="card" href="#poem-15"><span class="num">15</span><span class="title">Enseñando sin aprender</span><span class="read">Leer →</span></a><a class="card" href="#poem-16"><span class="num">16</span><span class="title">Oliste</span><span class="read">Leer →</span></a><a class="card" href="#poem-17"><span class="num">17</span><span class="title">Amarte un milenio</span><span class="read">Leer →</span></a><a class="card" href="#poem-18"><span class="num">18</span><span class="title">Debo y no quiero</span><span class="read">Leer →</span></a><a class="card" href="#poem-19"><span class="num">19</span><span class="title">Eterno desolado</span><span class="read">Leer →</span></a><a class="card" href="#poem-20"><span class="num">20</span><span class="title">Excusa</span><span class="read">Leer →</span></a><a class="card" href="#poem-21"><span class="num">21</span><span class="title">Espuma y nada más</span><span class="read">Leer →</span></a><a class="card" href="#poem-22"><span class="num">22</span><span class="title">Tanto en tan poco</span><span class="read">Leer →</span></a><a class="card" href="#poem-23"><span class="num">23</span><span class="title">Pliegues del tiempo</span><span class="read">Leer →</span></a><a class="card" href="#poem-24"><span class="num">24</span><span class="title">Deseo Fugaz</span><span class="read">Leer →</span></a><a class="card" href="#poem-25"><span class="num">25</span><span class="title">En todo momento me inspiras</span><span class="read">Leer →</span></a><a class="card" href="#poem-26"><span class="num">26</span><span class="title">Todo te busca a ti</span><span class="read">Leer →</span></a><a class="card" href="#poem-27"><span class="num">27</span><span class="title">Solo, te digo</span><span class="read">Leer →</span></a><a class="card" href="#poem-28"><span class="num">28</span><span class="title">Cenizas de noche</span><span class="read">Leer →</span></a><a class="card" href="#poem-29"><span class="num">29</span><span class="title">Impío</span><span class="read">Leer →</span></a><a class="card" href="#poem-30"><span class="num">30</span><span class="title">Gramática para dos</span><span class="read">Leer →</span></a><a class="card" href="#poem-31"><span class="num">31</span><span class="title">Soneto</span><span class="read">Leer →</span></a><a class="card" href="#poem-32"><span class="num">32</span><span class="title">Dinosaurio fatigado</span><span class="read">Leer →</span></a><a class="card" href="#poem-33"><span class="num">33</span><span class="title">Titilar</span><span class="read">Leer →</span></a><a class="card" href="#poem-34"><span class="num">34</span><span class="title">Lucha en la marea</span><span class="read">Leer →</span></a><a class="card" href="#poem-35"><span class="num">35</span><span class="title">La paz de los naufragios</span><span class="read">Leer →</span></a><a class="card" href="#poem-36"><span class="num">36</span><span class="title">Geometría de la lluvia</span><span class="read">Leer →</span></a><a class="card" href="#poem-37"><span class="num">37</span><span class="title">La casa deshabitada</span><span class="read">Leer →</span></a><a class="card" href="#poem-38"><span class="num">38</span><span class="title">La costura del tiempo</span><span class="read">Leer →</span></a><a class="card" href="#poem-39"><span class="num">39</span><span class="title">El hallazgo</span><span class="read">Leer →</span></a><a class="card" href="#poem-40"><span class="num">40</span><span class="title">La pecera de diamante</span><span class="read">Leer →</span></a><a class="card" href="#poem-41"><span class="num">41</span><span class="title">El idioma de los incendios</span><span class="read">Leer →</span></a><a class="card" href="#poem-42"><span class="num">42</span><span class="title">El truco de los relojes rotos</span><span class="read">Leer →</span></a><a class="card" href="#poem-43"><span class="num">43</span><span class="title">La paz de las almas rotas</span><span class="read">Leer →</span></a><a class="card" href="#poem-44"><span class="num">44</span><span class="title">La física del abismo</span><span class="read">Leer →</span></a><a class="card" href="#poem-45"><span class="num">45</span><span class="title">El libreto del silencio</span><span class="read">Leer →</span></a>
+  </div>
+</section>
+
+<section>
+  
+<article class="poem" id="poem-1">
+  <div class="eyebrow">Poema 01 de 45</div>
+  <h2>Ventanas al alma</h2>
+  <div class="verses">No son solo pupilas y un iris pintado,
+sino espejos profundos, donde mi mundo se ha quedado
+Ventanas del alma que guardan el secreto
+de historias calladas y un amor predilecto.
+Son pozos de noche si el dolor se asoma,
+o cielos de frío cuando el gozo te toma.
+Dos lunas menguantes en tu rostro sereno,
+que brillan con fuego si el deseo es pleno.
+En su breve círculo encuentro el universo,
+la luz que me inspira, lo más bello de un verso.
+Me pierdo y me hallo, sin don ni desmayo,
+en esa mirada que a mi ser arrebata.
+Y aunque el tiempo avance y el cristal se fatigue,
+guardarán el brillo que mi alma siempre persigue.
+Son faros de vida, de verdad sin disfraz,
+los ojos que quiero a mirar.</div>
+  <div class="controls">
+    <a href="#indice">← Índice</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-2">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-2">
+  <div class="eyebrow">Poema 02 de 45</div>
+  <h2>Velada tomada</h2>
+  <div class="verses">En la frialdad de la noche
+sentí tus ojos quemando mi cuerpo,
+No pude procesar
+y pensé estar soñando despierto,
+Escenario tan perfecto vivía mi alma
+como si del cielo se tratara.
+No pude procesar palabras mi amada
+y solo recorrí con mi mano tu espalda,
+Escalofríos invadian tu cuerpo
+al sentir del deseo el aumento,
+No fue suficiente premura,
+la luna se encargó de tomar de un tirón tu ternura,
+La velada hicimos eterna,
+dimos en horas varias vueltas a la tierra.
+Hablamos del cielo nocturno,
+y lo lejano que se ve Saturno
+
+Al finalizar la noche,
+contigo parada en el pasto,
+no pude hacer algo más que acompañarte al ocaso,
+más tu mirada eterna me dejó la certeza,
+de que en ti hallé mi mayor riqueza.</div>
+  <div class="controls">
+    <a href="#poem-1">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-3">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-3">
+  <div class="eyebrow">Poema 03 de 45</div>
+  <h2>Trillas</h2>
+  <div class="verses">Imagino tu rostro de trigo,
+no puedo, no quiero
+soñar más contigo
+en este día gris
+el viento se viste fuego,
+aumenta del amor un deseo.
+Las nubes parecen de hielo,
+no se ve ni una estrella en el cielo,
+quiero decirte
+al terminar de estos versos
+que mi amor por ti,
+contenerlo ya no puedo.
+El sentir de tu piel es escaso
+en este mar de piedras al tacto,
+no te alejes de mí en este día,
+que sin ti el sol mío no brilla.</div>
+  <div class="controls">
+    <a href="#poem-2">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-4">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-4">
+  <div class="eyebrow">Poema 04 de 45</div>
+  <h2>Nuestro limbo</h2>
+  <div class="verses">Podría aprender a decir &quot;te amo&quot;
+en todos los idiomas que existen,
+pero que sentido tendría,
+si con solo un beso,
+un simple gesto,
+entenderías mucho mejor
+lo que trato de decirte
+Y no es chiste,
+escogería las flores más tiernas,
+de entre todos los jardines,
+las más bellas,
+solo para ti.
+Pues mi alma se engrandece
+tanto cuando estoy contigo,
+que temo que algún día
+ya no distinga lo divino
+del peligro.
+
+Pues mi son se embarnece
+con las melodías de la muerte
+que ansia que partamos juntos
+para observar nuestra historia de amor
+aún ya difuntos.
+Y así pues
+tal vez creemos un limbo de amor,
+pues tú conviertes mi infierno
+en el cielo y las llamas del amor
+en el viento más fresco.</div>
+  <div class="controls">
+    <a href="#poem-3">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-5">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-5">
+  <div class="eyebrow">Poema 05 de 45</div>
+  <h2>Kiara</h2>
+  <div class="verses">Me desgarra no haberte sabido amar
+desde el principio,
+mi copo de nieve.
+Me marchita que sabía
+que no podría quererte
+como merecías,
+y lo intenté.
+Hoy,
+en la isla de la desesperación,
+siento más que nunca
+el paso del tiempo.
+No pediste quedar privada
+de observar el amanecer
+y el anochecer de los días.
+No pediste rendirte
+ante lo cruel del sentir.
+Nunca pediste nada
+
+y aún así sabes dar todo
+lo que yo sí pedí.
+Te pido perdón,
+porque mi insensatez
+fue más fuerte que tu amor,
+te suplico entiendas,
+que cómo pude lo intenté.
+No puedes comprender,
+mucho menos interpretar
+estas palabras,
+pero quiero que la sientas
+tanto y más
+que cuando sentiste el dolor
+de mi corazón.
+No todo se nos alineó
+para estar felices juntos,
+al contrario, todo se incrementó
+para estar separados.
+Pero aún así
+mi estrella blanca,
+nunca dejaste de destrozar,
+de desarmonizar,
+y no lo hiciste porque quisieras,
+sino porque a veces
+en este mundo que se te inundó
+de tanta oscuridad
+era tu forma de brillar.
+
+Eres y serás
+
+necia como la tormenta,
+impredecible como la marea,
+caótica como la tempestad,
+algo que sinceramente
+yo no he vivido mucho,
+pero sé pues,
+que por eso
+llegaste a mi vida
+con las nubes en tus ojos.
+
+Que sepas que yo
+siempre veré tu brillo,
+pase lo que pase,
+porque si estuviste ahí
+para consolar,
+cuando parecía
+que todo lo que
+los demás sabían
+hacer era gritar;
+yo estaré para gritar,
+para que todos entiendan
+que lo único que sé hacer
+es consolar.</div>
+  <div class="controls">
+    <a href="#poem-4">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-6">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-6">
+  <div class="eyebrow">Poema 06 de 45</div>
+  <h2>Lío</h2>
+  <div class="verses">Por la calle voy caminando,
+sin calor ni descartes,
+pero siempre con la foto tuya
+para cuando el amor me arranque.
+Del sol y la luna soy preso
+algo involuntariamente,
+pues no quiero olvidar tu cariño,
+aunque me cueste verte.
+Casi un suspiro es lo único
+que te pedía amor mío,
+cuando la vida quería,
+que se unieran nuestros caminos.
+Faros y luces son testigos
+de cuando estuviste conmigo,
+ni el más sucio juego del destino,
+se compara con nuestro amorío.
+
+Silencio en las mañanas,
+Ruido en las madrugadas,
+es el eco de tu voz,
+taladrando mi morada.</div>
+  <div class="controls">
+    <a href="#poem-5">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-7">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-7">
+  <div class="eyebrow">Poema 07 de 45</div>
+  <h2>Árnica</h2>
+  <div class="verses">Podría escribir miles de versos
+para intentar contarle a quién no te vió
+lo que provocaste en mi corazón.
+Y es que para describirte
+no son suficientes
+ni todas las letras esas
+de los libros que lees,
+ni para mencionar tu personalidad
+el espíritu de la rebelión del pueblo
+que tanto quieres.
+Tu aroma percibe mi intuición,
+que no existe en en la clasificación,
+de los placeres vanos
+o reencarnación.
+Más sin embargo tu esplendor,
+podría catalogarse
+
+como de entre las estrellas
+el mismísimo sol.
+Divina arnica amada mía,
+de entre las más simples multitudes
+eras pasantía,
+ignorada por los corazones,
+invisible a las oraciones;
+te miré,
+con la extenuante tez
+de los que se distinguen
+por mirar el acontecer.</div>
+  <div class="controls">
+    <a href="#poem-6">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-8">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-8">
+  <div class="eyebrow">Poema 08 de 45</div>
+  <h2>Desaires carmín</h2>
+  <div class="verses">De paso en salto,
+de salto en paso,
+regando amor
+cuál semilla del rastro,
+dejando en los pisos,
+de nuestra historia un pedazo.
+Dos aves que entrelazaron sus vuelos,
+siempre fuimos solo eso,
+compartimos cielo,
+haciendo de las nubes encuentro.
+Ambos conocimos nuevos aires,
+más yo siempre supe
+que en tus brazos se encontraban
+mis más profundos desmanes,
+por ello nunca te abandoné,
+me sentía preso de la jaula
+
+en la que de un día para otro
+me desperté.
+Sabía que si salía,
+no sería yo
+a quién se le originaría una herida,
+sería a tu piel de nácar,
+que tantas veces fue mi almohada,
+al pintar de la madrugada.
+
+Y esperé
+por si algún día
+al amanecer
+amenazabas con pintar tu tez,
+de rojo granate
+con el filo de la inmadurez,
+yo en la oscuridad implorare
+que no lo hagas,,
+por el recuerdo
+de lo que sentimos ayer.</div>
+  <div class="controls">
+    <a href="#poem-7">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-9">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-9">
+  <div class="eyebrow">Poema 09 de 45</div>
+  <h2>Pavesa</h2>
+  <div class="verses">Era un amor cardíaco,
+intenso como ninguno,
+el corazón esperaba paciente,
+porque sabía
+que había llegado su turno
+El sol y la luna
+hacían eclipse de día,
+solo así
+nuestro orgullo desaparecía.
+Nunca estábamos en lecho,
+menos pudimos ir lento,
+nunca nos tocamos el pecho,
+y aún así pensábamos en abolengo.
+Cuando una oruga
+apenas reposaba en mi mente,
+
+la tuya ya era mariposa
+revoloteando alegremente.
+Si apenas en mi cama
+habías descubierto el fuego,
+yo ya desperdiciaba olor a leño.
+Así era un día normal en nuestra vida,
+de entre la mirra la más fina,
+a la espera tus besos
+al medio día,
+para descansar de mi prisa.</div>
+  <div class="controls">
+    <a href="#poem-8">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-10">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-10">
+  <div class="eyebrow">Poema 10 de 45</div>
+  <h2>Namor</h2>
+  <div class="verses">A veces pensamos
+que la gravedad de los problemas
+se puede definir
+por el tamaño de las manos,
+de los pies,
+por la intensidad de las canas de aquel,
+la gravedad de sus arrugas
+que marcan el paso de la vejez.
+Sin embargo
+unos ya nacen con problemas,
+invisibles,
+pero problemas,
+Lo corto de sus pies es igual de corto
+que el amor que les queda,
+lo tierno de sus manos
+se irá tan pronto,
+
+cómo lo limpio de su cara,
+caminar sin tropezar
+se hará complejo
+con el vibrar de las calles
+y las nubes de sus sueños
+ya no las verán
+por los humos de la ciudad
+Aquel niño puede guardar
+en el temblar de sus manos,
+la misma angustia
+del grave señor
+que trabaja el campo.</div>
+  <div class="controls">
+    <a href="#poem-9">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-11">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-11">
+  <div class="eyebrow">Poema 11 de 45</div>
+  <h2>Olivos de amor</h2>
+  <div class="verses">¿Será acaso este nuestro momento?
+Mi luna,
+morocha de piel de lirios,
+no te dejo de imaginar
+en mis livios, sueños,
+mis delirios.
+Sé, que cada suspiro tuyo
+que la noche arrebata
+es un recuerdo del daño
+que le han hecho a tu alma.
+Sin embargo no temas,
+este encuentro
+tal vez no sea casualidad,
+si tú en mí confías
+no habrá tal experiencia
+
+como la de este sueño
+que vamos a navegar
+Deja que el amor fluya
+tal como agua de lluvia,
+deja que el amor resbale,
+cuál semilla de agave,
+deja que el amor cierne
+apareciendo como calor
+en tu vientre.
+
+Por último sembremos
+de esta noche un recuerdo
+que quede marcado
+como grave sacramento,
+que nos queme
+del deseo el aumento
+cada vez que la mente
+nos traiga a este recuerdo.</div>
+  <div class="controls">
+    <a href="#poem-10">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-12">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-12">
+  <div class="eyebrow">Poema 12 de 45</div>
+  <h2>Días especiales</h2>
+  <div class="verses">Me mido el pulso
+cada que puedo,
+para asegurame
+de no estar teniendo un sueño,
+me resulta inútil
+adjuntarle el adjetivo de normal,
+al hermoso paso
+del aire sobre las flores,
+al gotear de la lluvia
+desde la cima de ese pino,
+a las sabías palabras
+de algún amigo,
+también al entrecortar del tiempo
+cuando estás conmigo.
+No mido el bombear de mi sangre
+
+para asegurarme de que estoy vivo,
+más bien lo siento
+para recordarme
+de no vivir dormido.</div>
+  <div class="controls">
+    <a href="#poem-11">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-13">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-13">
+  <div class="eyebrow">Poema 13 de 45</div>
+  <h2>De grumete a almirante</h2>
+  <div class="verses">Buscando lo divino en lo mundano,
+me topé, me topé;
+con las olas de tus rizos,
+con las arenas de tu piel.
+Cuando creí querer perderme
+solo en la orilla de esa playa,
+me inundó
+la profundidad de tus pupilas,
+me encendieron,
+las ganas de navegar
+y surcando ya
+las corrientes de ese iris despintado,
+alucinaba cuál marinero
+que había soñado con el naufragio.
+Cualquier grumete había soñado
+con tan bello escenario,
+
+naufragar en lo pétreo de tus hombros,
+tomar por timón lo tierno de tus labios,
+y así pues
+ser arrecife del mar de tu encanto.</div>
+  <div class="controls">
+    <a href="#poem-12">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-14">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-14">
+  <div class="eyebrow">Poema 14 de 45</div>
+  <h2>Bravo</h2>
+  <div class="verses">Yo te enseñé cómo amar,
+tú a mí; el cómo quiero ser amado.
+Bienaventurado el que se atreva
+a hablar de esta historia,
+oscuridad en el valle de la sombra.
+El relato de dos innatos,
+para el arte de amar sin contrato.
+El trigal de un vistoso campo,
+encontrándose con la rosa
+que hábita el pantano.
+Romance de necios,
+sueño de jovatos,
+realidad de casi todos
+los enamorados.
+Bebimos tanto tiempo
+el elixir de la fruta de la piedad,
+
+que nunca más distinguimos
+cuando no hay que perdonar.
+Tú aprendiste a embarnecer en mis aguas,
+yo a no recaer con tus palabras.
+Yo aprendí a sujetarme a tus tierras,
+y tú a cortar mis raíces de ellas.</div>
+  <div class="controls">
+    <a href="#poem-13">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-15">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-15">
+  <div class="eyebrow">Poema 15 de 45</div>
+  <h2>Enseñando sin aprender</h2>
+  <div class="verses">Te fuiste,me fuí,
+nos dividimos,
+una nueva historia
+y nuevo mundo,
+pero cada cuál por su camino.
+No te fuiste sola,
+te fuiste con mis ganas de abrazar,
+de sentir, de palpar.
+Tampoco me dejaste en blanco,
+dejaste rastros de enseñanza
+que hasta hoy
+sigo persiguiendo en la madrugada,
+Intentando descifrar
+como fuimos tan ejemplarmente tercos,
+con mayor capacidad
+para sufrir que para soltar.
+
+Explorando los límites inhumanos
+de la vanidad,
+To orgullo fuerte como roca,
+el mío fácil para desgarrar
+cómo la ropa.
+Mi arrogancia siempre presente
+como la sombra,
+la tuya invisible
+al paso de las horas.
+
+Y aún así
+solo me queda agradecer,
+por todo el tiempo
+que de alguna manera me ahorraste,
+cortando de tirón nuestra raíz,
+curando y no maquillando la cicatriz.
+Un acto tan valiente
+como la obra del artista,
+cómo pintar solo de negro
+el cielo que alguna vez
+tuvo estrellas.</div>
+  <div class="controls">
+    <a href="#poem-14">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-16">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-16">
+  <div class="eyebrow">Poema 16 de 45</div>
+  <h2>Oliste</h2>
+  <div class="verses">Supe que te ibas mucho antes de la despedida.
+Me preparé para el dolor más amargo,
+pero ni eso bastó contra la acidez de tu partida.
+El pasar de las horas sobre el atardecer
+es ahora una precisa agonía.
+Tus altas macetas,
+donde resistía la vida de un romero,
+ya no ocultan la luz por la ventana
+ni delatan las cenizas de tus cómplices, los cigarros.
+Solo el agua en el bebedero del chupamirto
+sigue calentándose bajo el sol
+y congelándose al relucir la luna.
+Al llegar la cruda noche ya no siento tu nariz fría en mi espalda;
+ahora me quema la helada brisa impregnada en las sábanas.
+Pese a todo,
+la mancha ocre del techo sigue aquí,
+
+supongo que a ella no le importó que nunca la quisieras ahí.
+Si tocan a la puerta, ya no escucho a los gatos alertar de la presencia,
+solo me ensordece el vibrar de la insistencia.
+Un crujir malhumorado de la puerta se escapa de la rendija,
+como si a la madera no le importara que ya no haya quien la toque,
+quien la pinte, quien la azote, quien la elija.
+Al menos mi casa,
+la que había hecho nuestra,
+ya no huele a cenizas de cigarro,
+tampoco a romero quemado ni a arena de gato.
+Y no huele mal.
+Ahora huele mucho peor.</div>
+  <div class="controls">
+    <a href="#poem-15">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-17">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-17">
+  <div class="eyebrow">Poema 17 de 45</div>
+  <h2>Amarte un milenio</h2>
+  <div class="verses">Prometo acomodar tu alma
+dentro de las quimeras de mi sueños,
+ser tu eterno amante
+y de tus besos el dueño.
+En cada ocasión
+que nuestros pasos se encuentren
+llevar la fruta de la paz,
+para hacer festín de ella.
+Transportar el instrumento de la satisfacción
+para que acompañen
+la melodía de nuestros abrazos.
+No solo buscaré hacer eternos
+los momentos que sellen nuestros pasos,
+sino hacer de estos
+la orquesta perfecta para las historias
+que tejemos cuando nos miramos,
+
+Hilar con la seda del gusano de la pasión,
+un abrigo exclusivo
+para esta bella ocasión.</div>
+  <div class="controls">
+    <a href="#poem-16">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-18">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-18">
+  <div class="eyebrow">Poema 18 de 45</div>
+  <h2>Debo y no quiero</h2>
+  <div class="verses">Quisiera enfermar,
+y que se me taparan las venas,
+para que esta sangre,
+que tantas veces hirvió por ti,
+ya no divague por mi cuerpo.
+Que estos labios,
+en dónde tantas veces
+se congelo tu piel,
+ardieran al sentir un nuevo calor.
+Que a mi nariz necia,
+que no se olvida de tu olor,
+sufriera amnesia
+y dejara de estar
+en un eterno estado de persecución,
+que ya no busque más
+en otras fragancias torrentes de tu ardor.
+
+Ojalá que estos ojos,
+que atravesaron el iris de tu alma
+desde la pupila hasta la mirada
+se llenaran de niebla,
+y olvidaran cómo te veías por última vez,
+la última noche que te besé.</div>
+  <div class="controls">
+    <a href="#poem-17">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-19">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-19">
+  <div class="eyebrow">Poema 19 de 45</div>
+  <h2>Eterno desolado</h2>
+  <div class="verses">Mi tímpano, torpe y confundido,
+no se adapta al temblor del silencio
+que se cierne al pasar de las horas.
+Y es que nunca te lo dije;
+preferí, incluso,
+que nos separara la distancia del mar,
+para saber, al menos,
+que tú me esperabas en la orilla.
+Que la tierra se partiera a la mitad
+a metros de tocarnos,
+con tal de estar seguro
+de que estabas del otro lado.
+Ahora, divagaré mil años en la neblina,
+no dejaré de buscarte
+hasta que mis manos vuelvan a encontrarte.
+Pese a todo y todos,
+
+jamás hubiera querido el vacío;
+no saber más de ti,
+de si te encuentras bien,
+de si también te sientes perdido.
+Porque si un día muero,
+será de hambre,
+tal vez de ti;
+te devoré las ganas de amar
+cuando estuviste a mi lado,
+y así pues ya no queda que comer,
+estando aquí triste acostado.
+
+Pero si antes muero
+por apuestas del destino,
+quiero que sepan
+que si en la noche no dormí,
+fue por buscarte en la oscuridad,
+y si en el día no desperté,
+fue por quererte, al fin,
+soñar en la eternidad.</div>
+  <div class="controls">
+    <a href="#poem-18">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-20">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-20">
+  <div class="eyebrow">Poema 20 de 45</div>
+  <h2>Excusa</h2>
+  <div class="verses">En un hito de falsa esperanza,
+acurrucado sobre los hilos
+de la mediocridad,
+te prometí nunca excusarme por ti
+y esa gitana promesa falló.
+Mundana la cabeza
+que me hizo pensar,
+en poder mantener cautiva,
+una llama que calcinaba todo a su paso,
+todo este tiempo mi gran defecto
+y que exageraba con prevención
+bromeando en cada ocasión
+para restarle peso e incomodidad,
+era simplemente, ser yo.</div>
+  <div class="controls">
+    <a href="#poem-19">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-21">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-21">
+  <div class="eyebrow">Poema 21 de 45</div>
+  <h2>Espuma y nada más</h2>
+  <div class="verses">Quisiera regresar
+a quién sabe dónde,
+quién sabe por qué
+para poder gritar
+y que nadie precise mi nombre.
+Morir casi ahogado por la sal de mar
+vagar y nadar
+dentro de mis propias lágrimas
+Que las frases que grité,
+desde dónde ni la luz llega
+salgan del agua como burbujas.
+Estar pegado a tus tobillos
+como alga a los pilares del muelle,
+buscar en un farol
+la luz que me falta de tus ojos.
+Rodeado de tanta agua
+y aún así me siento seco
+
+espero; cada tronar
+de la espuma de mar
+me abrace y cubra,
+como si se tratara de mi funeral.</div>
+  <div class="controls">
+    <a href="#poem-20">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-22">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-22">
+  <div class="eyebrow">Poema 22 de 45</div>
+  <h2>Tanto en tan poco</h2>
+  <div class="verses">Mirando a través de tus ojos
+sobre las ventanas de tu alma,
+descifré que no hace falta ir al cielo
+para encontrar un paraíso.
+Acostándome en tu vientre
+reposado en esa almohada de caramelo,
+supe que no hacía falta dormir en cama
+para aún así descansar.
+Recargado en silencio sobre tu hombro,
+mientras mis sentidos recorrían
+el suave crepitar de tu cabello,
+entendí que en ti encontré
+el tono rojo más bello
+y a su vez la máxima expresión del fuego.
+Contigo aprendí
+que no hace falta tocar para sentir
+
+que comer de tu risa,
+es lo único que necesito para vivir
+Si es necesario inventaré más horas,
+que de las veinticuatro del día
+quiero ocupar todas para estar contigo
+y aún así agregar una
+solo para cuando el &quot;adiós&quot; te digo.</div>
+  <div class="controls">
+    <a href="#poem-21">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-23">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-23">
+  <div class="eyebrow">Poema 23 de 45</div>
+  <h2>Pliegues del tiempo</h2>
+  <div class="verses">Cuántas veces he deseado
+congelar el reloj,
+para que ni siquiera
+la gota de agua
+que baja por la ventana
+halle su fin.
+Pedirle al minutero del destino
+solo unos pocos segundos,
+para no renunciar
+a este sencillo instante
+pues cerrada la puerta
+para apreciarlo, es tarde.
+Quizá algún día entendamos
+que el tiempo nunca nos envejeció;
+nosotros lo llenamos de arrugas
+de tanto que nos cuidó.</div>
+  <div class="controls">
+    <a href="#poem-22">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-24">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-24">
+  <div class="eyebrow">Poema 24 de 45</div>
+  <h2>Deseo Fugaz</h2>
+  <div class="verses">No sé si sea tu mayoría de edad
+o lo perfecta que luces al caminar,
+pero quiero acariciar tu cabello negro
+y en un sueño contigo terminar
+Llenarte de palabras quisiera;
+aunque ninguna sería tan certera.
+Expresar lo que por ti yo siento
+me lleva al más grande tormento.
+No puedo ignorar tu presencia,
+cada gesto tuyo me da sentencia
+y aunque la razón me condena
+mi corazón más por ti se envenena.
+Tus palabras serían mi fortuna,
+aunque ninguna alcanzaría a expresar,
+el torbellino que en mi pecho nace,
+cuando tu silueta me invita a soñar.
+Tu mirar es condena y es alivio,
+
+me atrapa, me consume, me da motivo,
+aunque la distancia me separe a veces
+de tu voz, mi corazón insiste
+que seas de mis latidos la razón.</div>
+  <div class="controls">
+    <a href="#poem-23">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-25">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-25">
+  <div class="eyebrow">Poema 25 de 45</div>
+  <h2>En todo momento me inspiras</h2>
+  <div class="verses">Escribo bastante inoportunamente,
+bajo la sombra del árbol más feo,
+esperando un autobús lleno.
+Bajo la lupa de muchos ojos y,
+a veces, cuando ni siquiera he visto tu rostro,
+me entretengo con las palabras
+que solo tú y yo conocemos,
+intentando encontrar una excusa
+para volver a vernos.
+Si pudiera, anotaría en el aire,
+así mis palabras viajarían hasta ti
+y por fin te enterarías de todo;
+todo lo que te escribí.
+Pero creo que he encontrado una solución,
+ya construyo un poema con las estrellas
+para las noches que quieras
+
+mires hacia arriba
+y encuentres consuelo en ellas.
+Y ojalá, leyendo alguno de mis textos,
+recuerdes que bajo la misma luna
+hay una libreta en blanco
+que solo se llena
+con los cumplidos que le has dado.</div>
+  <div class="controls">
+    <a href="#poem-24">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-26">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-26">
+  <div class="eyebrow">Poema 26 de 45</div>
+  <h2>Todo te busca a ti</h2>
+  <div class="verses">No quieres que te llame &quot;mi mundo&quot;,
+pero.
+Las constelaciones quieren copiar,
+la armonía de tus lunares
+La media luna desea tener,
+la forma de tu sonrisa.
+El sol amaría,
+brillar a la par de tus ojos.
+El océano envidia,
+las olas de tus rizos.
+El Volcán suplica,
+por el rojo de tu cabello.
+Las montañas admiran,
+la altura que tú tienes.
+Y la nieve se atormenta
+por no tocar,
+con la suavidad de tu piel.</div>
+  <div class="controls">
+    <a href="#poem-25">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-27">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-27">
+  <div class="eyebrow">Poema 27 de 45</div>
+  <h2>Solo, te digo</h2>
+  <div class="verses">Presente aquí,
+en el lugar
+que solo tú me enseñaste,
+me cuestiono,
+si alguien más vendrá
+guiado por tus manos
+que solo saben tocar
+lo mirarás con tus ojos
+que solo pueden amar.
+Si cumplirán promesas
+de dos viejos amantes
+que ya no existen.
+Aún así, me arrastro por la calle
+con tu nombre tatuado
+en cada sonrisa que doy.
+E Intento olvidar aquello
+que un dia me tuvo preso;
+
+el idioma del beso.
+Solo queda saber que tú,
+abrazada a la sombra de alguien más,
+ya inventaste una nueva forma
+de decir &quot;te amo&quot;.
+Porque si tú,
+me decías que me amabas
+en varios idiomas,
+yo siempre te lo decía en el mismo
+pero lo escribía, en infinitas formas.</div>
+  <div class="controls">
+    <a href="#poem-26">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-28">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-28">
+  <div class="eyebrow">Poema 28 de 45</div>
+  <h2>Cenizas de noche</h2>
+  <div class="verses">En la penumbra licuada de la madrugada
+tu figura ardía sin hacer incendio,
+como esas brasas que no alumbran
+pero condenan al tacto.
+Había pliegues de humo
+dibujando espirales sobre tu boca,
+y yo, absorto,
+intentando descifrar el turbio idioma de tus pausas.
+No eras la noche,
+eras lo que la noche esconde,
+pero que muestra a quien confía.
+Y cuando reías,
+algo en el aire se fracturaba
+no era precisamente risa,
+era un filo suave,
+una forma elegante de
+quebrar el tiempo.
+
+Mis manos
+recorrieron la cartografía incierta de tu espalda,
+hallando en cada vértebra
+un motivo distinto para quedarme.
+La luna, una estratega silenciosa
+bebía de nosotros su espectáculo favorito,
+mientras el tiempo, ebrio,
+tropezaba entre segundos inútiles.
+No hubo promesas.
+No hubo futuro.
+
+Solo ese instante dilatado,
+y un poco al azar
+casi sagrado,
+Me hizo comprender tarde, pero a tiempo
+que hay noches que no se aman;
+se inhalan,
+se padecen,
+se vuelven vicio de la memoria.
+Y tú…
+tú me dejaste ardiendo sin fuego
+temblando sin frío,
+vivo,
+pero apenas.</div>
+  <div class="controls">
+    <a href="#poem-27">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-29">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-29">
+  <div class="eyebrow">Poema 29 de 45</div>
+  <h2>Impío</h2>
+  <div class="verses">Heme aquí,
+producto de un frenesí
+de segundos,
+queriendo morir
+por algo que se sienta eterno.
+Con el deseo incesante
+de inventar para ti
+un diccionario del amor,
+pues el que tengo como mío,
+ya perdió todo significado.
+No depender de lo maleable de las palabras
+para hacer algo,
+construir con la dureza de la acción
+nuestras cimentaciones.
+Controlar la tundra y el fuego,
+para estar en armonía
+en todas las estaciones.
+
+Pues si tu corazón es de hierba
+y sus sentimientos de aire,
+prometo fumar la hierba
+y esparcir humo de amor por el aire.</div>
+  <div class="controls">
+    <a href="#poem-28">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-30">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-30">
+  <div class="eyebrow">Poema 30 de 45</div>
+  <h2>Gramática para dos</h2>
+  <div class="verses">No quiero prometerte el cielo,
+tiene la mala costumbre de caerse
+sobre quienes lo nombran demasiado.
+Quiero aprender contigo
+el idioma de las cosas
+que no necesitan decirse.
+Que una mano signifique refugio
+y tus brazos sean mi amuleto.
+Que esperar no sea distancia,
+sino otra forma de permanecer.
+Inventemos un alfabeto
+donde el nosotros
+no se escriba con tinta,
+sino con los pequeños actos
+que todos notan,
+pero nadie aplaude:
+servir dos tazas,
+
+pensarnos sin nombrarnos,
+volver sin hacer ruido</div>
+  <div class="controls">
+    <a href="#poem-29">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-31">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-31">
+  <div class="eyebrow">Poema 31 de 45</div>
+  <h2>Soneto</h2>
+  <div class="verses">Al sonar del crepitar de tus pasos,
+quedé hipnotizado y lento
+hiciste a mi oído atento,
+a mi alma repartiste abrazos.
+Por compañero llevabas al viento
+tu amiga, la luz que te marcaba
+aire tan ansioso no alcanzaba
+las notas de lo que es frío aliento
+
+Ojos tercos solo mirarte quieren,
+mi boca solo hablarte necesita
+cruel espera me tiene en penumbra.
+
+Puede que las manos se me quiebren
+la voz que te dirijo es finita
+pero mi pulso se acostumbra.</div>
+  <div class="controls">
+    <a href="#poem-30">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-32">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-32">
+  <div class="eyebrow">Poema 32 de 45</div>
+  <h2>Dinosaurio fatigado</h2>
+  <div class="verses">Me encuentro
+ciertamente cansado,
+cansado de pasar el día
+con los ojos empañados,
+y solo enjuagarlos
+al llegar la noche.
+También un poco fastidiado
+por atormentarme a veces,
+ya sea con esos días
+que nunca llegaron,
+o con las promesas
+que jamás se harán realidad.
+Si es que lo toco hasta en el viento
+y lo huelo hasta en el agua,
+no caben más llamas
+en el infierno que llevo por cuerpo.</div>
+  <div class="controls">
+    <a href="#poem-31">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-33">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-33">
+  <div class="eyebrow">Poema 33 de 45</div>
+  <h2>Titilar</h2>
+  <div class="verses">Me quedé,
+con las manos frías
+y el pecho caliente,
+con las estrellas
+pero sin la luna.
+Con el sentir casi escarchado
+y la respiración confundida,
+soñaba con ayudarte
+a salvar tu vida
+pero tú solo pensabas
+que quería arruinar tu muerte.
+Entonces sólo nos quedó
+flotar como estrellas,
+tan cerca
+que casi fuimos
+una constelación;
+para que tú brillaras
+
+más que nunca,
+sólo antes de apagarte.</div>
+  <div class="controls">
+    <a href="#poem-32">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-34">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-34">
+  <div class="eyebrow">Poema 34 de 45</div>
+  <h2>Lucha en la marea</h2>
+  <div class="verses">Cómo el mar arrastra la arena
+así arrastro yo mis miedos,
+aferrándome al recuerdo
+de lo que sí fuimos
+y de lo que no seremos.
+Me gusta sumergirme en el océano,
+así me hago a la idea
+de que lo salado que cae por mis mejillas
+es la sal de mar que se me pega.
+Ahuyentando a las gaviotas
+para que no se le acerquen,
+al cadáver de mi sanación
+que ya en el agua flota.
+Con un remo en una mano
+pero remando con las dos,
+fluyo en este colchón de azul maya
+esperando que algún día
+
+el mar se canse antes que yo</div>
+  <div class="controls">
+    <a href="#poem-33">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-35">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-35">
+  <div class="eyebrow">Poema 35 de 45</div>
+  <h2>La paz de los naufragios</h2>
+  <div class="verses">El primer trago es el que quema el labio,
+un sabor amarillo, de vinagre y ceniza.
+La indiferencia llega sin aviso,
+como una mano fría que te borra la risa.
+Hay quien recibe el golpe y no se inmuta,
+quien se traga el veneno y dice que es agua,
+quien camina derecho por la ruta
+mientras por dentro se le apaga la fragua.
+Es tan fácil mentirse por las noches,
+mirar el techo y celebrar la calma.
+Decir: &quot;Ya nada duele, ya no hay reproches&quot;,
+mientras se vuelve de granito el alma.
+Pero esa paz es una trampa mansa,
+un territorio de aguas estancadas;
+el cuerpo sigue, pero el pecho cansa
+de sostener verdades simuladas.
+Quien se inmuniza contra el daño ajeno
+
+termina por perder también el fuego.
+Se vuelve un habitante de lo ajeno,
+un hombre ciego jugando a su propio juego.
+¿De qué te sirve no sentir el golpe
+si para no sufrirlo te congelas?
+Vivir invicto en un invierno torpe
+donde no alumbran ni las viejas velas.
+
+Prefiero mil veces el latido herido,
+el ácido que arde y que despierta,
+saber que estoy de pie, que no me he ido,
+que la piel sigue con la puerta abierta.
+Porque la paz que se compra con olvido
+no es paz, es solo una bandera muerta.</div>
+  <div class="controls">
+    <a href="#poem-34">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-36">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-36">
+  <div class="eyebrow">Poema 36 de 45</div>
+  <h2>Geometría de la lluvia</h2>
+  <div class="verses">Abro los ojos justo a mitad del beso, solo cuando llueve.
+No lo hago por desconfianza del agua,
+sino porque la tormenta necesita testigos
+y yo necesito comprobar que el mundo no te está borrando.
+Hay una honestidad extraña en el frío que nos cae encima:
+mientras todo afuera se deshace,
+nosotros nos quedamos.
+Aquí dentro, bajo el diluvio, todo es cóncavo y convexo.
+Es la curva de tu nuca que encaja en el hueco de mis manos,
+es el envés de la tormenta que nos cubre.
+Miro el agua correr por tus mejillas
+y en el reflejo deforme de cada gota que cae,
+en ese espejo diminuto, vertical y transitorio,
+veo la forma exacta de esto que sentimos.
+Una superficie que se dobla pero que sostiene el peso.
+Dicen que la lluvia es la insistencia del olvido,
+un llanto abstracto que termina por lavarlo todo.
+
+Pero yo te muerdo los labios húmedos y pienso en lo que no muere.
+Pienso en la materia que resiste,
+en la pequeña eternidad de bolsillo que nos inventamos
+cuando el cielo se cae a pedazos.
+Te quiero así, en esta física de lo imprevisto,
+donde dos cuerpos se vuelven refugio y frontera al mismo tiempo.
+Abro los ojos bajo el agua
+solo para confirmar que la memoria, si es que existe,
+tiene que parecerse mucho a tu piel empapada.</div>
+  <div class="controls">
+    <a href="#poem-35">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-37">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-37">
+  <div class="eyebrow">Poema 37 de 45</div>
+  <h2>La casa deshabitada</h2>
+  <div class="verses">He pasado tantas veces frente al espejo de pasillo
+sin el valor exacto para sostenerle la mirada al vidrio.
+Ya no recuerdo el color de mi propio iris cuando le da la luz,
+ni la forma en que mis ojos se achican cuando algo duele.
+El reflejo se ha vuelto un mueble utilitario,
+un charco de agua estancada donde solo se asoma un extraño
+a peinarse la prisa o a lavarse el cansancio de la frente.
+Mi casa ya no era mi casa, supongo.
+O tal vez fui yo el que se mudó de cuarto sin avisar.
+Este armazón de huesos, este pecho que sube y baja,
+se siente ahora como una dirección equivocada.
+Camino por mis propios pasillos internos sin reconocer los muebles,
+tropezando con los bordes de una memoria que ya no me pertenece,
+extranjero en el único territorio donde se suponía que estaba a salvo.
+Hace meses que no me toco el cuerpo,
+no por pudor, sino por un descuido burocrático del alma.
+Ya no sé si mis manos conservan la suavidad de antes
+
+o si tienen la aspereza de las cosas que se abandonan a la intemperie.
+Se han vuelto dos herramientas pesadas al final de los brazos,
+útiles para cargar objetos, para escribir palabras,
+pero completamente analfabetas a la hora de reconocer mi propia piel.
+Me he vuelto una llanura sin explorar, un mapa con las fronteras borradas.
+Y cuando el frío domina, la ausencia se vuelve una materia física.
+El invierno no viene de afuera, brota de las costillas,
+y es entonces cuando se extraña el calor de los abrazos.
+Esa costura breve de dos cuerpos que frena el viento de golpe,
+ese recordatorio táctil de que todavía estamos vivos.
+
+Porque es difícil pedirle a alguien que te abrigue
+cuando tú mismo no encuentras el interruptor para encender tu propio centro.
+Aquí sigo, de pie en el centro de una habitación desierta,
+esperando que el tacto regrese, que los ojos vuelvan a mirarme desde el fondo,
+y que el cuerpo deje de ser un hospedaje de paso
+para volver a ser mi hogar.</div>
+  <div class="controls">
+    <a href="#poem-36">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-38">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-38">
+  <div class="eyebrow">Poema 38 de 45</div>
+  <h2>La costura del tiempo</h2>
+  <div class="verses">He conseguido el cuaderno más pequeño de la existencia.
+Uno de esos que caben en el hueco cerrado del puño,
+donde las hojas son apenas del tamaño de un sello postal.
+Lo hice a propósito, casi como un acto de defensa propia.
+Sé cómo me pongo cuando se trata de hablar de nosotros:
+tiendo a desbordarme, a llenar páginas enteras con el inventario de tus gestos.
+Necesito límites.
+Necesito que el papel físico me obligue a morderme la lengua
+y me diga &quot;basta&quot; cuando intente exagerar la eternidad.
+Tal vez solo reduciendo el espacio encuentre la manera
+de darle a nuestra historia un tiempo prudente.
+Amarte, después de todo, ha sido un oficio muy humano,
+algo parecido a tejer con las manos un poco torpes a mitad de la noche.
+No es un relámpago que cae del cielo y lo cambia todo;
+es pasar el hilo con cuidado, punto por punto, fila por fila.
+A veces apretamos demasiado la hebra y el tejido se encoge,
+otras veces lo dejamos tan flojo que el frío se cuela por los huecos.
+
+Pero la belleza está en esa imperfección de costurero:
+saber desatar el nudo sin romperlo, jalar con suavidad y volver a empezar desde la última fila.
+En estas páginas minúsculas no caben los discursos eternos,
+y qué bueno, porque el futuro suele ser un territorio tramposo.
+Aquí solo hay espacio para lo que importa de verdad:
+el café que se enfría en la mesa, tu risa haciendo eco en el pasillo,
+el peso exacto de tu mano cuando caminamos sin rumbo fijo.
+Un tiempo prudente es esto: no correr hacia los años que todavía no existen,
+aprender a estirar el presente para que nos quepa el día completo.
+
+Escribir en lo pequeño me obliga a elegir las palabras con pinzas;
+si el papel es escaso, cada letra tiene que ser un pedazo de verdad desnuda.
+Ya estoy llegando a la última hoja del cuaderno,
+el margen se estrecha y la tela pide que termine la labor.
+No queda espacio para promesas largas ni para metáforas gastadas.
+Solo queda el último movimiento de los dedos,
+el remate que asegura que nada se desarme cuando guarde el libro en el bolsillo.
+Voy a ponerle a esto un broche especial, un seguro contra el viento:
+no quiero que seamos un incendio que arrase con el bosque entero,
+prefiero que seamos la aguja que se queda clavada, callada,
+uniendo con firmeza los dos lados de la prenda.</div>
+  <div class="controls">
+    <a href="#poem-37">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-39">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-39">
+  <div class="eyebrow">Poema 39 de 45</div>
+  <h2>El hallazgo</h2>
+  <div class="verses">Te buscas.
+Con los dedos cansados.
+Revisas los bolsillos,
+las esquinas del cuarto,
+y nada.
+Te declaras perdida.
+Pero mi poesía, linda,
+tiene ese solo oficio.
+Ese pequeño milagro.
+Yo no sigo pistas.
+No revuelvo los cajones.
+No busco.
+Solo me siento cerca.
+Dejo que pase el tiempo.
+Y de pronto,
+lo encuentro.
+Eso que te falta.
+
+Eso que no ves.
+Está en la curva floja de tus hombros.
+En tu manera humana de salvarte.
+Un brillo secreto,
+un tesoro de paso,
+que a ti se te escapa siempre
+y a mí se me queda clavado.
+No te canses.
+Ya no busques a oscuras.
+Lo que tú te niegas,
+mis versos te lo guardan.</div>
+  <div class="controls">
+    <a href="#poem-38">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-40">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-40">
+  <div class="eyebrow">Poema 40 de 45</div>
+  <h2>La pecera de diamante</h2>
+  <div class="verses">A veces desconfío de la voz que me cuenta.
+Ese consciente narrativo que se adueña de mis días,
+que insiste en ordenar mi historia siempre en prosa,
+pero una prosa rota, llena de aristas vivas,
+fragmentada en el suelo como un diamante que estalló de golpe.
+Brilla, sí, refleja la luz,
+pero corta a quien intente unir los pedazos.
+Luego está la incomodidad de lo que no sé cómo decir.
+Esas vagas ideas que se quedan flotando en el fondo,
+pesadas, difíciles de escalar, muros altos que nadie puede subir.
+Pero si te quedas callado, si te pones a pensar en serio,
+esos monstruos mudos empiezan a trepar por la garganta,
+te escalan la lengua, desesperados por volverse palabra,
+aunque quemen al salir.
+Para el mundo exterior guardo la liviandad.
+Predico un enunciado ligero cada mañana, un saludo cualquiera,
+mientras dejo que el tiempo pase con su juego de espejos.
+
+Cada hora que transcurre parece una mariposa mansa,
+un parpadeo de alas de colores en el aire;
+pero es un disfraz.
+Por dentro sé que es una arpía hambrienta que se va devorando el día.
+Y en medio de este invierno mental, empieza la inundación.
+La mente tiene goteras y el agua no deja de caer.
+Es un ciclo extraño: sudo este líquido, lo bebo para no morir,
+lo transpiro por los poros en cada verso que intento.
+Es el mismo veneno creativo que me mantiene despierto,
+que brota tanto y con tanta fuerza que me nubla la vista.
+
+Por un momento, viendo el desastre, llego a creer que he fundado un océano,
+que soy un náufrago en mitad de un mar bravío e interminable.
+Pero la realidad siempre impone sus paredes transparentes.
+Al estirar los dedos buscando el horizonte,
+el agua choca de frente contra el límite.
+Todo este oleaje ruidoso, este simulacro de tormenta que me ahoga,
+nunca fue el mar abierto,
+sino el agua estancada de mi propia pecera.</div>
+  <div class="controls">
+    <a href="#poem-39">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-41">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-41">
+  <div class="eyebrow">Poema 41 de 45</div>
+  <h2>El idioma de los incendios</h2>
+  <div class="verses">Qué manual tan absurdo me ha tocado descifrar.
+Mirar el tono de tu pelo por las mañanas
+para saber si el día viene con sol o con tormenta,
+como si tu cabello fuera el único mapa disponible
+en un territorio que cambia de nombre cada noche.
+Es un faro intermitente, la única señal física
+en medio de un oleaje que nunca sé cómo atajar.
+
+Me he vuelto un especialista en interpretar ruidos y fricciones.
+Tengo que traducir la frecuencia exacta de tus gritos,
+la prisa de tus llamadas que a veces solo buscan comprobar que sigo aquí,
+y esas caricias tuyas que se quedan a la mitad, entrecortadas,
+como si te diera miedo tocar demasiado y descubrir de qué estamos hechos.
+Pasas de la distancia más fría a esos arranques de pasión
+donde me buscas con los dientes, con rabia,
+como queriendo salvarte de un edificio que se cae.
+
+Y aquí me tienes, escarbando entre los escombros de tus días malos.
+Buscando una moraleja oculta dentro de tanto desperfecto,
+una lección de cordura que justifique las ojeras
+o el sentido de este cuento que insiste en escribirse con vidrios rotos.
+
+Es difícil encontrarle el orden a una casa que prefiere las goteras;
+reviso tus esquinas rotas, tus palabras hirientes,
+intentando descifrar si esto es amor
+o simplemente una costumbre hermosa de hacernos daño.
+
+Dices, o pienso, que debo domar tu corazón de una vez por todas.
+Ponerle un bozal a tus demonios para que nos dejen dormir en paz.
+Pero no sé si se puede domesticar el fuego sin terminar apagándolo,
+ni si tu belleza resistiría la calma de un jardín ordenado.
+
+Tal vez el error está en querer ponerle frenos a la caída.
+Porque un corazón que vive en el desastre no busca un domador,
+busca a alguien que no le tenga miedo a las cenizas.</div>
+  <div class="controls">
+    <a href="#poem-40">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-42">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-42">
+  <div class="eyebrow">Poema 42 de 45</div>
+  <h2>El truco de los relojes rotos</h2>
+  <div class="verses">A veces me cansa ver cómo la luz se mueve por la pared.
+Esa sombra del marco de la ventana
+que avanza despacio por el piso del cuarto,
+como un segundero mudo que nos viene a corretear.
+
+Por eso espero, con una paciencia terca,
+el día en que el cielo se quede por fin estático,
+en un solo tono fijo y tibio,
+cansado de mudar de piel cada doce horas.
+
+Que el sol se retire de una vez sin hacer ruido
+y que la luna se acomode arriba, como un foco limpio,
+sin prisa por esconderse detrás de los techos.
+Quiero quitar del medio los amaneceres,
+los calendarios colgados en la cocina,
+el desgaste diario de ver cómo se nos va la tarde
+mientras intentamos descifrar lo que somos.
+
+Lo hago por ti, corazón, porque te conozco.
+Para que ya no tengas forma de mirar el reloj de reojo,
+para que no te asuste el conteo de los meses
+ni te pongas a calcular la vida que se nos va entre los dedos.
+Sé que te da miedo el peso de los días,
+la sospecha de que el tiempo es un animal hambriento
+que termina por morderlo todo.
+Si el cielo deja de cambiar de color afuera,
+se te va a olvidar por completo llevar la cuenta.
+No sabrás si llevamos diez minutos o tres años
+siendo este mismo nudo de piel en mitad de la cama.
+
+No habrá lunes ni domingos para marcar la prisa,
+solo este presente largo, plano y seguro,
+donde el invierno y el verano valen exactamente lo mismo.
+Quiero borrar la urgencia de tus ojos.
+Que dejes de medir lo nuestro por los años que se acumulan,
+y empieces a medirlo por las veces en que, estando juntos,
+el mundo se cansa de girar.</div>
+  <div class="controls">
+    <a href="#poem-41">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-43">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-43">
+  <div class="eyebrow">Poema 43 de 45</div>
+  <h2>La paz de las almas rotas</h2>
+  <div class="verses">El fuego que nos quema por dentro tiene una prisa extraña
+Se enciende de golpe, nos consume las manos y nos deja a oscuras en el mismo cuarto de siempre,
+con los dedos oliendo a pólvora seca.
+Me pregunto, mirando el techo, por qué es así de fugaz el deseo que siento por ti, como una llama
+cautiva en la prisión de la luz, sin plenitud.
+Nos quedamos atrapados en el puro resplandor, queriendo arder más fuerte pero sin encontrar el
+fondo del invierno.
+La casa se vuelve un monstruo enorme cuando se apagan los ruidos de la calle. Es en ese silencio
+espeso, donde la memoria se pone a revisar los cajones viejos, donde el dolor se vuelve una presencia
+física en la cama. Cada suspiro que doy en las noches mi dama, es el recuerdo de las heridas que
+dejaste en mi alma. No hay tregua para el aire que entra en el pecho; respirar, a veces, es solo volver a
+abrir la costura de los golpes que no se ven a simple vista.
+
+El llanto también se cansa, el pozo se queda seco y llega un día en que los ojos eligen la piedra antes
+que el agua. Con el pulso todavía temblando por lo que fuimos, te escribo estos versos disonantes
+porque ya no te bebo en mis mares de llanto, espero que sea dónde sea que descanses tu cuerpo de
+laureles no intentes dibujarte con otros pinceles.
+
+Tu silueta le pertenece a la verdad que nos inventamos, y da miedo pensar que otra mano intente
+borrar tus contornos.
+A pesar de la distancia y de los escombros que dejamos al salir, sé perfectamente que tu brillo no se
+apaga fácilmente. Hay personas que nacen con un faro por dentro, destinadas a rescatar a los que
+andamos perdidos en la niebla.
+
+La luz que en ti náufraga es de los milagros el más bello, dulce resplandor nunca dejes de titilar, eres
+esa esencia que guía a muchos a navegar. Sigue encendida, linda, aunque mis ojos ya no sean los que
+miren tu orilla.
+El tiempo termina por acomodar la mesa y limpiar los vidrios rotos del suelo. Se acabó la urgencia
+de buscarnos en los rincones y la rabia de sabernos incompletos. Libre estoy, estás, ya podemos
+caminar en paz, en la disonancia de estos versos espero encontrar el refugio que a nuestras almas
+nunca pudo llegar.</div>
+  <div class="controls">
+    <a href="#poem-42">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-44">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-44">
+  <div class="eyebrow">Poema 44 de 45</div>
+  <h2>La física del abismo</h2>
+  <div class="verses">Afuera el mundo se rompía con el ruido sordo de las cosas viejas,
+pero tú tenías los ojos fijos en la ventana,
+lejos de la rabia y del lodo de las calles.
+Sonreías a la luna,
+en una madrugada de desastres,
+encontrabas calma en tus agravios
+a pesar de todo,
+como quien descubre una flor limpia
+en mitad de un edificio que se quema.
+Mientras los demás buscaban un techo seguro,
+una mentira cómoda donde esconder el miedo,
+tú elegías la altura, la intemperie y el riesgo.
+
+Al borde de la cornisa
+sentías más calma
+que en ningún otro lugar.
+El vacío abajo no te daba vértigo;
+te daba el espacio exacto que te hacía falta
+para respirar sin que nadie te pisara la sombra.
+
+La piedra fría del cemento te devolvía el tacto,
+te recordaba de qué materia estabas hecha.
+Con los pies descalzos
+entendías que no todo es lo que te dicen, sino como lo tomas.
+El mundo puede gritar desde el suelo que estás perdida,
+pero eres tú quien decide, desde arriba,
+si el viento que te empuja es una amenaza
+o es solo una invitación para empezar a flotar.
+
+Quédate ahí arriba, donde el aire es más puro.
+Que abajo sigan corriendo las prisas y las penas de los hombres.
+Tú ya aprendiste el secreto de los que no se rompen:
+que para salvarse de la tierra,
+a veces hay que aprender a vivir en la orilla.</div>
+  <div class="controls">
+    <a href="#poem-43">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#poem-45">Siguiente →</a>
+  </div>
+</article>
+
+<article class="poem" id="poem-45">
+  <div class="eyebrow">Poema 45 de 45</div>
+  <h2>El libreto del silencio</h2>
+  <div class="verses">Hay una presencia muda que camina conmigo cuando las luces de la calle se apagan. No es la
+soledad vacía de los cuartos abandonados, sino un cómplice fiel que cuida la espalda sin hacer ruido,
+una sombra que sabe medir el pulso de mis horas más bajas.
+Sigilo valiente, no acompaña,
+pero tampoco abandona.
+Sabe perfectamente cuándo quedarse quieto y cuándo empujar; puede ser en exceso frío como la
+tundra o, si te le acercas demasiado, al por menor, ardiente cuál fuego. Un termómetro extremo
+para un pecho que nunca sabe estar templado.
+Este testigo mudo tiene dos caras, como las monedas viejas que se guardan en el cajón. Sabe vestirse
+de luto o de tregua según le convenga a la cabeza, transformando el piso del cuarto en las tablas de
+un escenario invisible.
+Sigilo negro, sigilo blanco
+haz de mis noches una obra de teatro
+donde la mesa sea la escenografía y la lámpara el único reflector.
+Qué el telón se abra en mi mejor momento
+y desaparezcas tú,
+para en el fondo aplaudir lento.
+Porque tú y yo sabemos que el verdadero triunfo no es el ruido del mundo, sino el eco callado que
+dejas en la oscuridad cuando te retiras a los palcos.
+
+Eres el niño que le tenía miedo al monstruo debajo de la cama y, al mismo tiempo, el viejo cansado
+que se sienta a esperar que se disipe la última tormenta del año.
+Sigilo niño, sigilo viejo
+mirémonos las manos antes de que la prisa del día regrese a borrarnos. Todavía nos queda tinta en
+los dedos y suficiente noche en las ventanas.
+convirtamos mi lienzo,
+en nuestra obra perfecta.
+
+Un cuadro hecho de ausencias, de trazos firmes que no necesitan explicarse a nadie y de verdades
+que solo se sostienen cuando el resto del mundo se ha ido a dormir.
+Al final, cuando amanezca y el ruido de la ciudad limpie tu rastro, sé que te quedarás agazapado
+debajo de las cosas cotidianas. No necesito que me salves del invierno, solo que me ayudes a sostener
+el peso de la función.
+Cualquiera puede gritar cuando la casa se le viene encima,
+pero solo nosotros sabemos cómo arder
+sin que los demás noten el humo.</div>
+  <div class="controls">
+    <a href="#poem-44">← Anterior</a>
+    <a href="#indice">Índice</a>
+    <a href="#indice">Índice →</a>
+  </div>
+</article>
+
+</section>
+</main>
+
+<footer>
+  De mí para nadie · Un inventario de cercanía y lejanía<br>
+  Drucillo · 2026
+</footer>
+</body>
+</html>
