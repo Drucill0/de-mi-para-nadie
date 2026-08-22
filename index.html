@@ -1942,6 +1942,37 @@ el corazón nunca miento.</div>
   </div>
 </section>
 </main>
-<footer>De mí para nadie · Rubén “Drucillo”<br>51 poemas · edición web de lectura</footer>
+<footer>De mí para nadie · Rubén “Drucillo”<br>51 poemas · edición web de lectura</footer><script>
+document.addEventListener('DOMContentLoaded', () => {
+  const poems = document.querySelectorAll('.poem');
+  const vistos = new Set();
+
+  const registrarPoema = (poema) => {
+    if (!poema || vistos.has(poema.id)) return;
+    if (typeof gtag !== 'function') return;
+
+    vistos.add(poema.id);
+
+    const titulo = poema.querySelector('h2')?.textContent.trim() || poema.id;
+
+    gtag('event', 'poem_view', {
+      poem_id: poema.id,
+      poem_name: titulo
+    });
+  };
+
+  const observer = new IntersectionObserver((entradas) => {
+    entradas.forEach(entrada => {
+      if (entrada.isIntersecting) {
+        registrarPoema(entrada.target);
+      }
+    });
+  }, {
+    threshold: 0.5
+  });
+
+  poems.forEach(poema => observer.observe(poema));
+});
+</script>
 </body>
 </html>
